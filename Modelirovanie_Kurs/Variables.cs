@@ -13,7 +13,11 @@ namespace Modelirovanie_Kurs
         public uint AM { get; set; } = 0;
         public uint C { get; set; } = 0;
 
-        public char[] ToCharArray (uint value) => Convert.ToString(value, toBase: 2).ToCharArray();
-        
+        public char[] ToCharArray(uint value)
+        {
+            char[] chars = Convert.ToString(value, toBase: 2).ToCharArray();
+            Array.Reverse(chars, 0, chars.Length);
+            return chars;
+        }
     }
 }

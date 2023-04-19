@@ -41,19 +41,7 @@ namespace Modelirovanie_Kurs
             }
             else if (ArrStateA[1])
             {
-                if ((_variables.B & 0x4000) != 0)
-                {
-                    _variables.C += _variables.AM;
-                    _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
-                    _variables.AM >>= 1;
-                    Count--;
-                }
-                else
-                {
-                    _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
-                    _variables.AM >>= 1;
-                    Count--;
-                }
+               OneCycleIteration();
                 ArrStateA[1] = false;
                 ArrStateA[2] = true;
             }
@@ -76,8 +64,7 @@ namespace Modelirovanie_Kurs
                 }
                 else
                 {
-                    ArrStateA[2] = false;
-                    ArrStateA[1] = true;
+                    OneCycleIteration();          
                 }
             }
             else if (ArrStateA[3])
@@ -90,6 +77,23 @@ namespace Modelirovanie_Kurs
                 ArrStateA[0] = true;
             }
             return _variables;
+        }
+
+        private void OneCycleIteration()
+        {
+            if ((_variables.B & 0x4000) != 0)
+            {
+                _variables.C += _variables.AM;
+                _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
+                _variables.AM >>= 1;
+                Count--;
+            }
+            else
+            {
+                _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
+                _variables.AM >>= 1;
+                Count--;
+            }
         }
     }
 }

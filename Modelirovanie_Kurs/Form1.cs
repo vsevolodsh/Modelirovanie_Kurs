@@ -4,10 +4,11 @@ namespace Modelirovanie_Kurs
     {
         Variables variables = new();
         ModelMircoProg mmp;
-        bool isFirstMode = true; 
+        bool isFirstMode = true;
         Label[] arrStartValueA;
         Label[] arrStartValueB;
         Label[] arrResValueB;
+        Label[] arrResValueA;
         Label[] arrResValueAM;
         Label[] arrResValueC;
         string strValueA = "";
@@ -25,9 +26,13 @@ namespace Modelirovanie_Kurs
                 labelStartValueB6, labelStartValueB7, labelStartValueB8, labelStartValueB9, labelStartValueB10, labelStartValueB11,labelStartValueB12,
                 labelStartValueB13, labelStartValueB14, labelStartValueB15};
 
-            arrResValueB = new Label[] {labelResValueB15, labelResValueB14, labelResValueB13, labelResValueB12, labelResValueB11, labelResValueB10,
-                labelResValueB9, labelResValueB8, labelResValueB7, labelResValueB6, labelResValueB5, labelResValueB4,labelResValueB3,
-                labelResValueB2, labelResValueB1, labelResValueB0};
+            arrResValueA = new Label[] {labelResValueA0, labelResValueA1, labelResValueA2, labelResValueA3, labelResValueA4, labelResValueA5,
+                labelResValueA6, labelResValueA7, labelResValueA8, labelResValueA9, labelResValueA10, labelResValueA11,labelResValueA12,
+                labelResValueA13, labelResValueA14, labelResValueA15};
+
+            arrResValueB = new Label[] {labelResValueB0, labelResValueB1, labelResValueB2, labelResValueB3, labelResValueB4, labelResValueB5,
+                labelResValueB6, labelResValueB7, labelResValueB8, labelResValueB9, labelResValueB10, labelResValueB11,labelResValueB12,
+                labelResValueB13, labelResValueB14, labelResValueB15};
         }
 
         private void labelStartValue_Click(object sender, EventArgs e)
@@ -38,7 +43,7 @@ namespace Modelirovanie_Kurs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = arrStartValueA.Length-1; i >= 0; i--)
+            for (int i = arrStartValueA.Length - 1; i >= 0; i--)
             {
                 strValueA += arrStartValueA[i].Text;
                 strValueB += arrStartValueB[i].Text;
@@ -86,17 +91,34 @@ namespace Modelirovanie_Kurs
             {
                 mmp.ExecuteTact();
                 UpdateVar();
+                if (mmp.ArrStateA[0])
+                {
+                    MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+                }
             }
-            
+
         }
 
         private void UpdateVar()
         {
-            char[] arrChar = variables.ToCharArray(variables.B);
-            for (int i = 0; i < arrChar.Length; i++)
+            char[] arrCharB = variables.ToCharArray(variables.B);
+            char[] arrCharA = variables.ToCharArray(variables.A);
+            for (int i = 0; i < arrResValueB.Length; i++)
             {
-                arrResValueB[i].Text = arrChar[i].ToString();
+                if (i <= arrCharB.Length - 1)
+                    arrResValueB[i].Text = arrCharB[i].ToString();
+                else
+                    arrResValueB[i].Text = "0";
             }
+            for (int i = 0; i < arrResValueA.Length; i++)
+            {
+                if (i <= arrCharA.Length - 1)
+                    arrResValueA[i].Text = arrCharA[i].ToString();
+                else
+                    arrResValueA[i].Text = "0";
+            }
+
         }
+
     }
 }
