@@ -33,6 +33,18 @@ namespace Modelirovanie_Kurs
             arrResValueB = new Label[] {labelResValueB0, labelResValueB1, labelResValueB2, labelResValueB3, labelResValueB4, labelResValueB5,
                 labelResValueB6, labelResValueB7, labelResValueB8, labelResValueB9, labelResValueB10, labelResValueB11,labelResValueB12,
                 labelResValueB13, labelResValueB14, labelResValueB15};
+
+            arrResValueAM = new Label[] {labelResValueAM0, labelResValueAM1, labelResValueAM2, labelResValueAM3, labelResValueAM4, labelResValueAM5,
+                labelResValueAM6, labelResValueAM7, labelResValueAM8, labelResValueAM9, labelResValueAM10, labelResValueAM11,labelResValueAM12,
+                labelResValueAM13, labelResValueAM14, labelResValueAM15, labelResValueAM16, labelResValueAM17, labelResValueAM18, labelResValueAM19, labelResValueAM20,
+                labelResValueAM21,labelResValueAM22, labelResValueAM23, labelResValueAM24, labelResValueAM25, labelResValueAM26,
+                labelResValueAM27,labelResValueAM28, labelResValueAM29, labelResValueAM30, labelResValueAM31};
+
+            arrResValueC = new Label[] {labelResValueC0, labelResValueC1, labelResValueC2, labelResValueC3, labelResValueC4, labelResValueC5,
+                labelResValueC6, labelResValueC7, labelResValueC8, labelResValueC9, labelResValueC10, labelResValueC11,labelResValueC12,
+                labelResValueC13, labelResValueC14, labelResValueC15, labelResValueC16, labelResValueC17, labelResValueC18, labelResValueC19, labelResValueC20,
+                labelResValueC21,labelResValueC22, labelResValueC23, labelResValueC24, labelResValueC25, labelResValueC6,
+                labelResValueC27,labelResValueC28, labelResValueC29, labelResValueC30, labelResValueC31};
         }
 
         private void labelStartValue_Click(object sender, EventArgs e)
@@ -93,6 +105,7 @@ namespace Modelirovanie_Kurs
                 UpdateVar();
                 if (mmp.ArrStateA[0])
                 {
+
                     MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
                 }
             }
@@ -103,6 +116,8 @@ namespace Modelirovanie_Kurs
         {
             char[] arrCharB = variables.ToCharArray(variables.B);
             char[] arrCharA = variables.ToCharArray(variables.A);
+            char[] arrCharAM = variables.ToCharArray(variables.AM);
+            char[] arrCharC = variables.ToCharArray(variables.C);
             for (int i = 0; i < arrResValueB.Length; i++)
             {
                 if (i <= arrCharB.Length - 1)
@@ -118,7 +133,35 @@ namespace Modelirovanie_Kurs
                     arrResValueA[i].Text = "0";
             }
 
+            for (int i = 0; i < arrResValueAM.Length; i++)
+            {
+                if (i <= arrCharAM.Length - 1)
+                    arrResValueAM[i].Text = arrCharAM[i].ToString();
+                else
+                    arrResValueAM[i].Text = "0";
+            }
+
+            for (int i = 0; i < arrResValueC.Length; i++)
+            {
+                if (i <= arrCharC.Length - 1)
+                    arrResValueC[i].Text = arrCharC[i].ToString();
+                else
+                    arrResValueC[i].Text = "0";
+            }
+
         }
 
+        private void buttonAuto_Click(object sender, EventArgs e)
+        {
+            if (isFirstMode)
+            {
+                do
+                {
+                    mmp.ExecuteTact();
+                    UpdateVar();
+                } while (!mmp.ArrStateA[0]);
+                MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+            }
+        }
     }
 }
