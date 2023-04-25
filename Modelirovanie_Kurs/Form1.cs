@@ -162,6 +162,7 @@ namespace Modelirovanie_Kurs
                 } while (!mmp.ArrStateA[0]);
                 MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
             }
+            buttonAuto.Enabled = false;
         }
     }
 }
