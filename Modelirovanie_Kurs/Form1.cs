@@ -4,6 +4,11 @@ namespace Modelirovanie_Kurs
     {
         Variables variables = new();
         ModelMircoProg mmp;
+        StateAndConditionsMemory stAndCndtMemory = new();
+        CombinationScheme_Y cmbScheme_Y = new();
+        CombinationScheme_D cmbScheme_D = new();
+        OperatingDevice operatingDevice;
+        ControlDevice controlDevice;
         bool isFirstMode = true;
         Label[] arrStartValueA;
         Label[] arrStartValueB;
@@ -84,9 +89,20 @@ namespace Modelirovanie_Kurs
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            if (isFirstMode)
+            {
+                mmp.X0 = true;
+            }
+            else
+            {
+                operatingDevice = new(variables);
+                operatingDevice.ConditionsX[0] = true;
+                operatingDevice.FillConditionsXArray();
+                controlDevice = new(stAndCndtMemory, cmbScheme_D, cmbScheme_Y, operatingDevice);
+            }
             radioButtonA0.Checked = true;
             buttonTact.Enabled = true;
-            mmp.X0 = true;
+
             for (int i = arrStartValueA.Length - 1; i >= 0; i--)
             {
                 strValueA += arrStartValueA[i].Text;
@@ -110,6 +126,11 @@ namespace Modelirovanie_Kurs
 
                     MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
                 }
+            }
+            else
+            {
+                controlDevice.ExecuteTact();
+                UpdateVar();
             }
 
         }
@@ -198,12 +219,12 @@ namespace Modelirovanie_Kurs
                     else
                     {
                         checkBoxY6_Y8.Checked = false;
-                        checkBoxY5_Y8.Checked = true;   
+                        checkBoxY5_Y8.Checked = true;
                     }
                     radioButtonA1.Checked = false;
                     radioButtonA2.Checked = true;
                 }
-                else 
+                else
                 {
                     radioButtonA2.Checked = false;
                     checkBoxY9.Checked = true;
@@ -211,7 +232,7 @@ namespace Modelirovanie_Kurs
                 }
             }
         }
-       
+
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {

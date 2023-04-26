@@ -23,7 +23,7 @@
              () => {_variables.C |= 0x80000000;} //y10
              };
         }
-        private void FillConditionsXArray()
+        public void FillConditionsXArray()
         {
             ConditionsX[1] = (_variables.A & 0x7fff) == 0;
             ConditionsX[2] = (_variables.B & 0x7fff) == 0;
