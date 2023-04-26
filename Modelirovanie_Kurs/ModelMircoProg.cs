@@ -6,6 +6,7 @@
         public byte Count { get; private set; }
         public bool X0 { get; set; }
         public bool[] ArrStateA { get; set; } = new bool[4] { true, false, false, false };
+        public bool leftCircleBranch { get; set; } 
 
         public ModelMircoProg(Variables variables)
         {
@@ -22,6 +23,7 @@
                 else if ((_variables.A & 0x7fff) == 0 || (_variables.B & 0x7fff) == 0)
                 {
                     _variables.C = 0;
+                    _variables.YBoolArray[0] = true;
                 }
                 else
                 {
@@ -50,6 +52,7 @@
                     }
                     else if ((_variables.A >> 15 ^ _variables.B >> 15) == 1)
                     {
+                        _variables.YBoolArray[9] = true;
                         _variables.C |= 0x80000000;
                         ArrStateA[2] = false;
                         ArrStateA[0] = true;
@@ -70,6 +73,7 @@
             {
                 if ((_variables.A >> 15 ^ _variables.B >> 15) == 1)
                 {
+                    _variables.YBoolArray[9] = true;
                     _variables.C |= 0x80000000;
                 }
                 ArrStateA[3] = false;
@@ -86,12 +90,14 @@
                 _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
                 _variables.AM >>= 1;
                 Count--;
+                leftCircleBranch = false;
             }
             else
             {
                 _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
                 _variables.AM >>= 1;
                 Count--;
+                leftCircleBranch = true;
             }
         }
     }

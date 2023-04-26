@@ -34,6 +34,22 @@
             this.моделированиеНаУровнеМикропрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.моделированиеНаУровнеВзаимодействияУАИОАToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelY10 = new System.Windows.Forms.Label();
+            this.checkBoxY10 = new System.Windows.Forms.CheckBox();
+            this.checkBoxY9 = new System.Windows.Forms.CheckBox();
+            this.checkBoxY5_Y8 = new System.Windows.Forms.CheckBox();
+            this.checkBoxY6_Y8 = new System.Windows.Forms.CheckBox();
+            this.checkBoxY1_Y4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxY1 = new System.Windows.Forms.CheckBox();
+            this.labelY4 = new System.Windows.Forms.Label();
+            this.labelY2 = new System.Windows.Forms.Label();
+            this.labelY1_Left = new System.Windows.Forms.Label();
+            this.labelY1_Right = new System.Windows.Forms.Label();
+            this.radioButtonA4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonA3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonA2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonA1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonA0 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonAuto = new System.Windows.Forms.Button();
             this.buttonTact = new System.Windows.Forms.Button();
@@ -559,6 +575,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -831,7 +848,7 @@
             this.режимМоделированияToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1358, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1402, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -869,27 +886,243 @@
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.splitContainer1.Panel1.Controls.Add(this.labelY10);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxY10);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxY9);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxY5_Y8);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxY6_Y8);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxY1_Y4);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxY1);
+            this.splitContainer1.Panel1.Controls.Add(this.labelY4);
+            this.splitContainer1.Panel1.Controls.Add(this.labelY2);
+            this.splitContainer1.Panel1.Controls.Add(this.labelY1_Left);
+            this.splitContainer1.Panel1.Controls.Add(this.labelY1_Right);
+            this.splitContainer1.Panel1.Controls.Add(this.radioButtonA4);
+            this.splitContainer1.Panel1.Controls.Add(this.radioButtonA3);
+            this.splitContainer1.Panel1.Controls.Add(this.radioButtonA2);
+            this.splitContainer1.Panel1.Controls.Add(this.radioButtonA1);
+            this.splitContainer1.Panel1.Controls.Add(this.radioButtonA0);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.splitContainer1.Panel2.Controls.Add(this.buttonClear);
             this.splitContainer1.Panel2.Controls.Add(this.buttonAuto);
             this.splitContainer1.Panel2.Controls.Add(this.buttonTact);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Controls.Add(this.buttonStart);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1358, 636);
-            this.splitContainer1.SplitterDistance = 607;
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+            this.splitContainer1.Size = new System.Drawing.Size(1402, 1037);
+            this.splitContainer1.SplitterDistance = 637;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // labelY10
+            // 
+            this.labelY10.AutoSize = true;
+            this.labelY10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelY10.Location = new System.Drawing.Point(446, 912);
+            this.labelY10.Name = "labelY10";
+            this.labelY10.Size = new System.Drawing.Size(28, 17);
+            this.labelY10.TabIndex = 16;
+            this.labelY10.Text = "y10";
+            // 
+            // checkBoxY10
+            // 
+            this.checkBoxY10.AutoSize = true;
+            this.checkBoxY10.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBoxY10.Enabled = false;
+            this.checkBoxY10.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.checkBoxY10.Location = new System.Drawing.Point(473, 915);
+            this.checkBoxY10.Name = "checkBoxY10";
+            this.checkBoxY10.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxY10.TabIndex = 15;
+            this.checkBoxY10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBoxY10.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxY9
+            // 
+            this.checkBoxY9.AutoSize = true;
+            this.checkBoxY9.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBoxY9.Enabled = false;
+            this.checkBoxY9.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.checkBoxY9.Location = new System.Drawing.Point(464, 748);
+            this.checkBoxY9.Name = "checkBoxY9";
+            this.checkBoxY9.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxY9.TabIndex = 14;
+            this.checkBoxY9.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxY5_Y8
+            // 
+            this.checkBoxY5_Y8.AutoSize = true;
+            this.checkBoxY5_Y8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBoxY5_Y8.Enabled = false;
+            this.checkBoxY5_Y8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.checkBoxY5_Y8.Location = new System.Drawing.Point(605, 497);
+            this.checkBoxY5_Y8.Name = "checkBoxY5_Y8";
+            this.checkBoxY5_Y8.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxY5_Y8.TabIndex = 13;
+            this.checkBoxY5_Y8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBoxY5_Y8.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxY6_Y8
+            // 
+            this.checkBoxY6_Y8.AutoSize = true;
+            this.checkBoxY6_Y8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBoxY6_Y8.Enabled = false;
+            this.checkBoxY6_Y8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.checkBoxY6_Y8.Location = new System.Drawing.Point(311, 497);
+            this.checkBoxY6_Y8.Name = "checkBoxY6_Y8";
+            this.checkBoxY6_Y8.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxY6_Y8.TabIndex = 12;
+            this.checkBoxY6_Y8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBoxY6_Y8.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxY1_Y4
+            // 
+            this.checkBoxY1_Y4.AutoSize = true;
+            this.checkBoxY1_Y4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBoxY1_Y4.Enabled = false;
+            this.checkBoxY1_Y4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.checkBoxY1_Y4.Location = new System.Drawing.Point(464, 344);
+            this.checkBoxY1_Y4.Name = "checkBoxY1_Y4";
+            this.checkBoxY1_Y4.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxY1_Y4.TabIndex = 11;
+            this.checkBoxY1_Y4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBoxY1_Y4.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxY1
+            // 
+            this.checkBoxY1.AutoSize = true;
+            this.checkBoxY1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBoxY1.Enabled = false;
+            this.checkBoxY1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.checkBoxY1.Location = new System.Drawing.Point(166, 347);
+            this.checkBoxY1.Name = "checkBoxY1";
+            this.checkBoxY1.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxY1.TabIndex = 10;
+            this.checkBoxY1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBoxY1.UseVisualStyleBackColor = false;
+            // 
+            // labelY4
+            // 
+            this.labelY4.AutoSize = true;
+            this.labelY4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelY4.Location = new System.Drawing.Point(437, 360);
+            this.labelY4.Name = "labelY4";
+            this.labelY4.Size = new System.Drawing.Size(21, 17);
+            this.labelY4.TabIndex = 9;
+            this.labelY4.Text = "y3";
+            // 
+            // labelY2
+            // 
+            this.labelY2.AutoSize = true;
+            this.labelY2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelY2.Location = new System.Drawing.Point(437, 344);
+            this.labelY2.Name = "labelY2";
+            this.labelY2.Size = new System.Drawing.Size(21, 17);
+            this.labelY2.TabIndex = 8;
+            this.labelY2.Text = "y2";
+            // 
+            // labelY1_Left
+            // 
+            this.labelY1_Left.AutoSize = true;
+            this.labelY1_Left.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelY1_Left.Location = new System.Drawing.Point(148, 344);
+            this.labelY1_Left.Name = "labelY1_Left";
+            this.labelY1_Left.Size = new System.Drawing.Size(21, 17);
+            this.labelY1_Left.TabIndex = 7;
+            this.labelY1_Left.Text = "y1";
+            // 
+            // labelY1_Right
+            // 
+            this.labelY1_Right.AutoSize = true;
+            this.labelY1_Right.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelY1_Right.Location = new System.Drawing.Point(437, 327);
+            this.labelY1_Right.Name = "labelY1_Right";
+            this.labelY1_Right.Size = new System.Drawing.Size(21, 17);
+            this.labelY1_Right.TabIndex = 6;
+            this.labelY1_Right.Text = "y1";
+            // 
+            // radioButtonA4
+            // 
+            this.radioButtonA4.AutoSize = true;
+            this.radioButtonA4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.radioButtonA4.Enabled = false;
+            this.radioButtonA4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.radioButtonA4.Location = new System.Drawing.Point(415, 953);
+            this.radioButtonA4.Name = "radioButtonA4";
+            this.radioButtonA4.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonA4.TabIndex = 5;
+            this.radioButtonA4.TabStop = true;
+            this.radioButtonA4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.radioButtonA4.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonA3
+            // 
+            this.radioButtonA3.AutoSize = true;
+            this.radioButtonA3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.radioButtonA3.Enabled = false;
+            this.radioButtonA3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.radioButtonA3.Location = new System.Drawing.Point(415, 782);
+            this.radioButtonA3.Name = "radioButtonA3";
+            this.radioButtonA3.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonA3.TabIndex = 4;
+            this.radioButtonA3.TabStop = true;
+            this.radioButtonA3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.radioButtonA3.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonA2
+            // 
+            this.radioButtonA2.AutoSize = true;
+            this.radioButtonA2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.radioButtonA2.Enabled = false;
+            this.radioButtonA2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.radioButtonA2.Location = new System.Drawing.Point(415, 551);
+            this.radioButtonA2.Name = "radioButtonA2";
+            this.radioButtonA2.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonA2.TabIndex = 3;
+            this.radioButtonA2.TabStop = true;
+            this.radioButtonA2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.radioButtonA2.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonA1
+            // 
+            this.radioButtonA1.AutoSize = true;
+            this.radioButtonA1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.radioButtonA1.Enabled = false;
+            this.radioButtonA1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.radioButtonA1.Location = new System.Drawing.Point(415, 385);
+            this.radioButtonA1.Name = "radioButtonA1";
+            this.radioButtonA1.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonA1.TabIndex = 2;
+            this.radioButtonA1.TabStop = true;
+            this.radioButtonA1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.radioButtonA1.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonA0
+            // 
+            this.radioButtonA0.AutoSize = true;
+            this.radioButtonA0.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.radioButtonA0.Enabled = false;
+            this.radioButtonA0.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.radioButtonA0.ForeColor = System.Drawing.Color.Black;
+            this.radioButtonA0.Location = new System.Drawing.Point(425, 70);
+            this.radioButtonA0.Name = "radioButtonA0";
+            this.radioButtonA0.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonA0.TabIndex = 1;
+            this.radioButtonA0.TabStop = true;
+            this.radioButtonA0.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.radioButtonA0.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(543, 957);
+            this.pictureBox1.Size = new System.Drawing.Size(586, 1033);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -5919,11 +6152,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "A";
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(383, 426);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 5;
+            this.buttonClear.Text = "Очистить";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 660);
+            this.ClientSize = new System.Drawing.Size(1402, 1061);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -6990,5 +7233,22 @@
         private Button buttonTact;
         private Button buttonAuto;
         private PictureBox pictureBox1;
+        private CheckBox checkBoxY9;
+        private Label labelY4;
+        private Label labelY2;
+        private Label labelY1_Left;
+        private Label labelY1_Right;
+        private Label labelY10;
+        internal CheckBox checkBoxY5_Y8;
+        internal CheckBox checkBoxY6_Y8;
+        internal CheckBox checkBoxY1_Y4;
+        internal CheckBox checkBoxY1;
+        internal RadioButton radioButtonA4;
+        internal RadioButton radioButtonA3;
+        internal RadioButton radioButtonA2;
+        internal RadioButton radioButtonA1;
+        internal RadioButton radioButtonA0;
+        internal CheckBox checkBoxY10;
+        private Button buttonClear;
     }
 }

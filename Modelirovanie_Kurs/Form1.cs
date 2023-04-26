@@ -84,6 +84,7 @@ namespace Modelirovanie_Kurs
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            radioButtonA0.Checked = true;
             buttonTact.Enabled = true;
             mmp.X0 = true;
             for (int i = arrStartValueA.Length - 1; i >= 0; i--)
@@ -103,6 +104,7 @@ namespace Modelirovanie_Kurs
             {
                 mmp.ExecuteTact();
                 UpdateVar();
+                UpdateInterfaceFlags();
                 if (mmp.ArrStateA[0])
                 {
 
@@ -110,6 +112,21 @@ namespace Modelirovanie_Kurs
                 }
             }
 
+        }
+
+        private void buttonAuto_Click(object sender, EventArgs e)
+        {
+            if (isFirstMode)
+            {
+                do
+                {
+                    mmp.ExecuteTact();
+                    UpdateVar();
+                    UpdateInterfaceFlags();
+                } while (!mmp.ArrStateA[0]);
+                MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+            }
+            buttonAuto.Enabled = false;
         }
 
         private void UpdateVar()
@@ -151,18 +168,59 @@ namespace Modelirovanie_Kurs
 
         }
 
-        private void buttonAuto_Click(object sender, EventArgs e)
+        private void UpdateInterfaceFlags()
         {
             if (isFirstMode)
             {
-                do
+                if (mmp.ArrStateA[0])
                 {
-                    mmp.ExecuteTact();
-                    UpdateVar();
-                } while (!mmp.ArrStateA[0]);
-                MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+                    radioButtonA0.Checked = false;
+                    radioButtonA2.Checked = false;
+                    if (variables.YBoolArray[0])
+                        checkBoxY1.Checked = true;
+                    if (variables.YBoolArray[9])
+                        checkBoxY10.Checked = true;
+                    radioButtonA4.Checked = true;
+                }
+                else if (mmp.ArrStateA[1])
+                {
+                    radioButtonA0.Checked = false;
+                    checkBoxY1_Y4.Checked = true;
+                    radioButtonA1.Checked = true;
+                }
+                else if (mmp.ArrStateA[2])
+                {
+                    if (mmp.leftCircleBranch)
+                    {
+                        checkBoxY5_Y8.Checked = false;
+                        checkBoxY6_Y8.Checked = true;
+                    }
+                    else
+                    {
+                        checkBoxY6_Y8.Checked = false;
+                        checkBoxY5_Y8.Checked = true;   
+                    }
+                    radioButtonA1.Checked = false;
+                    radioButtonA2.Checked = true;
+                }
+                else 
+                {
+                    radioButtonA2.Checked = false;
+                    checkBoxY9.Checked = true;
+                    radioButtonA3.Checked = true;
+                }
             }
-            buttonAuto.Enabled = false;
+        }
+       
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
