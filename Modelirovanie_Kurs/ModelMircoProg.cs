@@ -3,7 +3,6 @@
     internal class ModelMircoProg
     {
         Variables _variables;
-        public byte Count { get; private set; }
         public bool X0 { get; set; }
         public bool[] ArrStateA { get; set; } = new bool[4] { true, false, false, false };
         public bool leftCircleBranch { get; set; } 
@@ -29,7 +28,7 @@
                 {
                     _variables.C = 0;
                     _variables.AM = (uint)_variables.A  << 14 & 0x1FFFFFFF;
-                    Count = 0xF;
+                    _variables.Count = 0xF;
                     ArrStateA[0] = false;
                     ArrStateA[1] = true;
                 }
@@ -42,7 +41,7 @@
             }
             else if (ArrStateA[2])
             {
-                if (Count == 0)
+                if (_variables.Count == 0)
                 {
                     if ((_variables.C & 0x4000) != 0)
                     {
@@ -89,14 +88,14 @@
                 _variables.C += (_variables.AM << 2) >> 2;
                 _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
                 _variables.AM >>= 1;
-                Count--;
+                _variables.Count--;
                 leftCircleBranch = false;
             }
             else
             {
                 _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
                 _variables.AM >>= 1;
-                Count--;
+                _variables.Count--;
                 leftCircleBranch = true;
             }
         }

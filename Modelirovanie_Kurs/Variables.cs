@@ -12,6 +12,7 @@ namespace Modelirovanie_Kurs
         public ushort B { get; set; } = 0;
         public uint AM { get; set; } = 0;
         public uint C { get; set; } = 0;
+        public byte Count { get; set; }
         public bool[] YBoolArray = new bool[10];
 
         public char[] ToCharArray(uint value)
