@@ -5,8 +5,9 @@
         Variables _variables;
         public bool X0 { get; set; }
         public bool[] ArrStateA { get; set; } = new bool[4] { true, false, false, false };
-        public bool leftCircleBranch { get; set; } 
-
+        public bool RightCircleBranch { get; set; }
+        public bool IsCSet0 { get; set; } = false;
+        public bool IsCNegative { get; set; } = false;
         public ModelMircoProg(Variables variables)
         {
             _variables = variables;
@@ -22,7 +23,7 @@
                 else if ((_variables.A & 0x7fff) == 0 || (_variables.B & 0x7fff) == 0)
                 {
                     _variables.C = 0;
-                    _variables.YBoolArray[0] = true;
+                    IsCNegative = true;
                 }
                 else
                 {
@@ -51,7 +52,7 @@
                     }
                     else if ((_variables.A >> 15 ^ _variables.B >> 15) == 1)
                     {
-                        _variables.YBoolArray[9] = true;
+                        IsCNegative = true;
                         _variables.C |= 0x80000000;
                         ArrStateA[2] = false;
                         ArrStateA[0] = true;
@@ -72,7 +73,7 @@
             {
                 if ((_variables.A >> 15 ^ _variables.B >> 15) == 1)
                 {
-                    _variables.YBoolArray[9] = true;
+                    IsCNegative = true;
                     _variables.C |= 0x80000000;
                 }
                 ArrStateA[3] = false;
@@ -89,14 +90,14 @@
                 _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
                 _variables.AM >>= 1;
                 _variables.Count--;
-                leftCircleBranch = false;
+                RightCircleBranch = true;
             }
             else
             {
                 _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000));
                 _variables.AM >>= 1;
                 _variables.Count--;
-                leftCircleBranch = true;
+                RightCircleBranch = false;
             }
         }
     }

@@ -9,15 +9,17 @@ namespace Modelirovanie_Kurs
         CombinationScheme_D cmbScheme_D = new();
         OperatingDevice operatingDevice;
         ControlDevice controlDevice;
-        bool isFirstMode = true;
+        bool isMicroProgMode = true;
         Label[] arrStartValueA;
         Label[] arrStartValueB;
         Label[] arrResValueB;
         Label[] arrResValueA;
         Label[] arrResValueAM;
         Label[] arrResValueC;
+        Label[] arrCurrentCount;
         string strValueA = "";
         string strValueB = "";
+        bool isOver = false;
         public Form1()
         {
             InitializeComponent();
@@ -50,6 +52,8 @@ namespace Modelirovanie_Kurs
                 labelResValueC13, labelResValueC14, labelResValueC15, labelResValueC16, labelResValueC17, labelResValueC18, labelResValueC19, labelResValueC20,
                 labelResValueC21,labelResValueC22, labelResValueC23, labelResValueC24, labelResValueC25, labelResValueC6,
                 labelResValueC27,labelResValueC28, labelResValueC29, labelResValueC30, labelResValueC31};
+
+            arrCurrentCount = new Label[] { labelCount0, labelCount1, labelCount2, labelCount3, labelCount4, labelCount5, labelCount6, labelCount7 };
         }
 
         private void labelStartValue_Click(object sender, EventArgs e)
@@ -79,27 +83,16 @@ namespace Modelirovanie_Kurs
 
         private void моделированиеЌа”ровнећикропрограммыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            isFirstMode = true;
+            isMicroProgMode = true;
         }
 
         private void моделированиеЌа”ровне¬заимодействи€”ј»ќјToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            isFirstMode = false;
+            isMicroProgMode = false;
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            if (isFirstMode)
-            {
-                mmp.X0 = true;
-            }
-            else
-            {
-                operatingDevice = new(variables);
-                operatingDevice.ConditionsX[0] = true;
-                operatingDevice.FillConditionsXArray();
-                controlDevice = new(stAndCndtMemory, cmbScheme_D, cmbScheme_Y, operatingDevice);
-            }
             radioButtonA0.Checked = true;
             buttonTact.Enabled = true;
 
@@ -112,32 +105,52 @@ namespace Modelirovanie_Kurs
             variables.B = Convert.ToUInt16(strValueB, 2);
             strValueA = "";
             strValueB = "";
+            if (isMicroProgMode)
+            {
+                mmp.X0 = true;
+            }
+            else
+            {
+                operatingDevice = new(variables);
+                operatingDevice.ConditionsX[0] = true;
+                operatingDevice.FillConditionsXArray();
+                stAndCndtMemory.ConditionsX = operatingDevice.ConditionsX;
+                controlDevice = new(stAndCndtMemory, cmbScheme_D, cmbScheme_Y, operatingDevice);
+                controlDevice.ExecuteTact();
+            }
         }
-
+        bool firstTact = true;
         private void buttonTact_Click(object sender, EventArgs e)
         {
-            if (isFirstMode)
+            if (isMicroProgMode)
             {
                 mmp.ExecuteTact();
                 UpdateVar();
                 UpdateInterfaceFlags();
                 if (mmp.ArrStateA[0])
                 {
-
                     MessageBox.Show($"”множение окончено. –езультат: {variables.C}");
+                    buttonTact.Enabled = false;
                 }
             }
             else
             {
+
                 controlDevice.ExecuteTact();
                 UpdateVar();
+                UpdateInterfaceFlags();
+                if (stAndCndtMemory.ArrStateA[0] && isOver)
+                {
+                    MessageBox.Show($"”множение окончено. –езультат: {variables.C}");
+                    buttonTact.Enabled = false;
+                }
             }
 
         }
 
         private void buttonAuto_Click(object sender, EventArgs e)
         {
-            if (isFirstMode)
+            if (isMicroProgMode)
             {
                 do
                 {
@@ -145,6 +158,16 @@ namespace Modelirovanie_Kurs
                     UpdateVar();
                     UpdateInterfaceFlags();
                 } while (!mmp.ArrStateA[0]);
+                MessageBox.Show($"”множение окончено. –езультат: {variables.C}");
+            }
+            else
+            {
+                do
+                {
+                    controlDevice.ExecuteTact();
+                    UpdateVar();
+                    UpdateInterfaceFlags();
+                } while (!isOver);
                 MessageBox.Show($"”множение окончено. –езультат: {variables.C}");
             }
             buttonAuto.Enabled = false;
@@ -156,6 +179,7 @@ namespace Modelirovanie_Kurs
             char[] arrCharA = variables.ToCharArray(variables.A);
             char[] arrCharAM = variables.ToCharArray(variables.AM);
             char[] arrCharC = variables.ToCharArray(variables.C);
+            char[] arrCharCount = variables.ToCharArray(variables.Count);
             for (int i = 0; i < arrResValueB.Length; i++)
             {
                 if (i <= arrCharB.Length - 1)
@@ -186,53 +210,85 @@ namespace Modelirovanie_Kurs
                 else
                     arrResValueC[i].Text = "0";
             }
-
+            for (int i = 0; i < arrCurrentCount.Length; i++)
+            {
+                if (i <= arrCharCount.Length - 1)
+                    arrCurrentCount[i].Text = arrCharCount[i].ToString();
+                else
+                    arrCurrentCount[i].Text = "0";
+            }
         }
 
         private void UpdateInterfaceFlags()
         {
-            if (isFirstMode)
+            bool[] statesA = new bool[4];
+            if (isMicroProgMode)
             {
-                if (mmp.ArrStateA[0])
+                statesA = mmp.ArrStateA;
+            }
+            else
+            {
+                statesA = stAndCndtMemory.ArrStateA;
+            }
+            SetAllFlagsFalse();
+            if (statesA[0])
+            {
+                if ((mmp.IsCSet0 || cmbScheme_Y.OperationsY[0]) && firstTact)
                 {
-                    radioButtonA0.Checked = false;
-                    radioButtonA2.Checked = false;
-                    if (variables.YBoolArray[0])
-                        checkBoxY1.Checked = true;
-                    if (variables.YBoolArray[9])
-                        checkBoxY10.Checked = true;
+                    checkBoxY1.Checked = true;
                     radioButtonA4.Checked = true;
                 }
-                else if (mmp.ArrStateA[1])
+                else if ((mmp.IsCNegative || cmbScheme_Y.OperationsY[9]) && !firstTact)
                 {
-                    radioButtonA0.Checked = false;
-                    checkBoxY1_Y4.Checked = true;
-                    radioButtonA1.Checked = true;
-                }
-                else if (mmp.ArrStateA[2])
-                {
-                    if (mmp.leftCircleBranch)
-                    {
-                        checkBoxY5_Y8.Checked = false;
-                        checkBoxY6_Y8.Checked = true;
-                    }
-                    else
-                    {
-                        checkBoxY6_Y8.Checked = false;
-                        checkBoxY5_Y8.Checked = true;
-                    }
-                    radioButtonA1.Checked = false;
-                    radioButtonA2.Checked = true;
+                    checkBoxY10.Checked = true;
+                    radioButtonA4.Checked = true;
                 }
                 else
                 {
-                    radioButtonA2.Checked = false;
-                    checkBoxY9.Checked = true;
-                    radioButtonA3.Checked = true;
+                    radioButtonA4.Checked = true;
                 }
+                isOver = true;
+            }
+            else if (statesA[1])
+            {
+                checkBoxY1_Y4.Checked = true;
+                radioButtonA1.Checked = true;
+                firstTact = false;
+            }
+            else if (statesA[2])
+            {
+                if (mmp.RightCircleBranch || cmbScheme_Y.OperationsY[4])
+                {
+                    checkBoxY5_Y8.Checked = true;
+                }
+                else
+                {
+                    checkBoxY6_Y8.Checked = true;
+                }
+                radioButtonA2.Checked = true;
+            }
+            else if (statesA[3])
+            {
+                checkBoxY9.Checked = true;
+                radioButtonA3.Checked = true;
             }
         }
 
+        private void SetAllFlagsFalse()
+        {
+            radioButtonA0.Checked = false;
+            radioButtonA1.Checked = false;
+            radioButtonA2.Checked = false;
+            radioButtonA3.Checked = false;
+            radioButtonA4.Checked = false;
+            checkBoxY1.Checked = false;
+            checkBoxY1_Y4.Checked = false;
+            checkBoxY5_Y8.Checked = false;
+            checkBoxY6_Y8.Checked = false;
+            checkBoxY9.Checked = false;
+            checkBoxY10.Checked = false;
+
+        }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
