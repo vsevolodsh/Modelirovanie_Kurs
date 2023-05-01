@@ -64,33 +64,66 @@
             this.buttonAuto = (new global::System.Windows.Forms.Button());
             this.buttonTact = (new global::System.Windows.Forms.Button());
             this.groupBox2 = (new global::System.Windows.Forms.GroupBox());
+            this.label40 = (new global::System.Windows.Forms.Label());
+            this.panel256 = (new global::System.Windows.Forms.Panel());
+            this.labelCount0 = (new global::System.Windows.Forms.Label());
+            this.panel257 = (new global::System.Windows.Forms.Panel());
+            this.labelCount1 = (new global::System.Windows.Forms.Label());
             this.label19 = (new global::System.Windows.Forms.Label());
+            this.panel258 = (new global::System.Windows.Forms.Panel());
+            this.label70 = (new global::System.Windows.Forms.Label());
             this.panel88 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM0 = (new global::System.Windows.Forms.Label());
+            this.panel259 = (new global::System.Windows.Forms.Panel());
+            this.labelCount4 = (new global::System.Windows.Forms.Label());
             this.panel193 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM1 = (new global::System.Windows.Forms.Label());
+            this.panel260 = (new global::System.Windows.Forms.Panel());
+            this.label78 = (new global::System.Windows.Forms.Label());
             this.panel194 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM16 = (new global::System.Windows.Forms.Label());
+            this.panel261 = (new global::System.Windows.Forms.Panel());
+            this.labelCount3 = (new global::System.Windows.Forms.Label());
             this.panel195 = (new global::System.Windows.Forms.Panel());
             this.label32 = (new global::System.Windows.Forms.Label());
+            this.panel262 = (new global::System.Windows.Forms.Panel());
+            this.label86 = (new global::System.Windows.Forms.Label());
             this.panel196 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM17 = (new global::System.Windows.Forms.Label());
+            this.panel263 = (new global::System.Windows.Forms.Panel());
+            this.labelCount5 = (new global::System.Windows.Forms.Label());
             this.panel197 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM4 = (new global::System.Windows.Forms.Label());
+            this.panel264 = (new global::System.Windows.Forms.Panel());
+            this.label94 = (new global::System.Windows.Forms.Label());
             this.panel198 = (new global::System.Windows.Forms.Panel());
             this.label44 = (new global::System.Windows.Forms.Label());
+            this.panel265 = (new global::System.Windows.Forms.Panel());
+            this.labelCount2 = (new global::System.Windows.Forms.Label());
             this.panel199 = (new global::System.Windows.Forms.Panel());
             this.label48 = (new global::System.Windows.Forms.Label());
+            this.panel266 = (new global::System.Windows.Forms.Panel());
+            this.label104 = (new global::System.Windows.Forms.Label());
             this.panel200 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM20 = (new global::System.Windows.Forms.Label());
+            this.panel267 = (new global::System.Windows.Forms.Panel());
+            this.label106 = (new global::System.Windows.Forms.Label());
             this.panel201 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM3 = (new global::System.Windows.Forms.Label());
+            this.panel268 = (new global::System.Windows.Forms.Panel());
+            this.labelCount7 = (new global::System.Windows.Forms.Label());
             this.panel202 = (new global::System.Windows.Forms.Panel());
             this.label56 = (new global::System.Windows.Forms.Label());
+            this.panel269 = (new global::System.Windows.Forms.Panel());
+            this.label114 = (new global::System.Windows.Forms.Label());
             this.panel203 = (new global::System.Windows.Forms.Panel());
             this.label60 = (new global::System.Windows.Forms.Label());
+            this.panel270 = (new global::System.Windows.Forms.Panel());
+            this.labelCount6 = (new global::System.Windows.Forms.Label());
             this.panel204 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM19 = (new global::System.Windows.Forms.Label());
+            this.panel271 = (new global::System.Windows.Forms.Panel());
+            this.label122 = (new global::System.Windows.Forms.Label());
             this.panel205 = (new global::System.Windows.Forms.Panel());
             this.labelResValueAM5 = (new global::System.Windows.Forms.Label());
             this.panel206 = (new global::System.Windows.Forms.Panel());
@@ -585,39 +618,7 @@
             this.label3 = (new global::System.Windows.Forms.Label());
             this.label2 = (new global::System.Windows.Forms.Label());
             this.label1 = (new global::System.Windows.Forms.Label());
-            this.panel256 = (new global::System.Windows.Forms.Panel());
-            this.labelCount0 = (new global::System.Windows.Forms.Label());
-            this.panel257 = (new global::System.Windows.Forms.Panel());
-            this.labelCount1 = (new global::System.Windows.Forms.Label());
-            this.panel258 = (new global::System.Windows.Forms.Panel());
-            this.label70 = (new global::System.Windows.Forms.Label());
-            this.panel259 = (new global::System.Windows.Forms.Panel());
-            this.labelCount4 = (new global::System.Windows.Forms.Label());
-            this.panel260 = (new global::System.Windows.Forms.Panel());
-            this.label78 = (new global::System.Windows.Forms.Label());
-            this.panel261 = (new global::System.Windows.Forms.Panel());
-            this.labelCount3 = (new global::System.Windows.Forms.Label());
-            this.panel262 = (new global::System.Windows.Forms.Panel());
-            this.label86 = (new global::System.Windows.Forms.Label());
-            this.panel263 = (new global::System.Windows.Forms.Panel());
-            this.labelCount5 = (new global::System.Windows.Forms.Label());
-            this.panel264 = (new global::System.Windows.Forms.Panel());
-            this.label94 = (new global::System.Windows.Forms.Label());
-            this.panel265 = (new global::System.Windows.Forms.Panel());
-            this.labelCount2 = (new global::System.Windows.Forms.Label());
-            this.panel266 = (new global::System.Windows.Forms.Panel());
-            this.label104 = (new global::System.Windows.Forms.Label());
-            this.panel267 = (new global::System.Windows.Forms.Panel());
-            this.label106 = (new global::System.Windows.Forms.Label());
-            this.panel268 = (new global::System.Windows.Forms.Panel());
-            this.labelCount7 = (new global::System.Windows.Forms.Label());
-            this.panel269 = (new global::System.Windows.Forms.Panel());
-            this.label114 = (new global::System.Windows.Forms.Label());
-            this.panel270 = (new global::System.Windows.Forms.Panel());
-            this.labelCount6 = (new global::System.Windows.Forms.Label());
-            this.panel271 = (new global::System.Windows.Forms.Panel());
-            this.label122 = (new global::System.Windows.Forms.Label());
-            this.label40 = (new global::System.Windows.Forms.Label());
+            this.checkBoxX0 = (new global::System.Windows.Forms.CheckBox());
             this.menuStrip1.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -625,19 +626,35 @@
             this.splitContainer1.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel256.SuspendLayout();
+            this.panel257.SuspendLayout();
+            this.panel258.SuspendLayout();
             this.panel88.SuspendLayout();
+            this.panel259.SuspendLayout();
             this.panel193.SuspendLayout();
+            this.panel260.SuspendLayout();
             this.panel194.SuspendLayout();
+            this.panel261.SuspendLayout();
             this.panel195.SuspendLayout();
+            this.panel262.SuspendLayout();
             this.panel196.SuspendLayout();
+            this.panel263.SuspendLayout();
             this.panel197.SuspendLayout();
+            this.panel264.SuspendLayout();
             this.panel198.SuspendLayout();
+            this.panel265.SuspendLayout();
             this.panel199.SuspendLayout();
+            this.panel266.SuspendLayout();
             this.panel200.SuspendLayout();
+            this.panel267.SuspendLayout();
             this.panel201.SuspendLayout();
+            this.panel268.SuspendLayout();
             this.panel202.SuspendLayout();
+            this.panel269.SuspendLayout();
             this.panel203.SuspendLayout();
+            this.panel270.SuspendLayout();
             this.panel204.SuspendLayout();
+            this.panel271.SuspendLayout();
             this.panel205.SuspendLayout();
             this.panel206.SuspendLayout();
             this.panel207.SuspendLayout();
@@ -882,22 +899,6 @@
             this.panel32.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel256.SuspendLayout();
-            this.panel257.SuspendLayout();
-            this.panel258.SuspendLayout();
-            this.panel259.SuspendLayout();
-            this.panel260.SuspendLayout();
-            this.panel261.SuspendLayout();
-            this.panel262.SuspendLayout();
-            this.panel263.SuspendLayout();
-            this.panel264.SuspendLayout();
-            this.panel265.SuspendLayout();
-            this.panel266.SuspendLayout();
-            this.panel267.SuspendLayout();
-            this.panel268.SuspendLayout();
-            this.panel269.SuspendLayout();
-            this.panel270.SuspendLayout();
-            this.panel271.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -944,6 +945,7 @@
             // 
             this.splitContainer1.Panel1.AutoScroll = (true);
             this.splitContainer1.Panel1.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxX0);
             this.splitContainer1.Panel1.Controls.Add(this.label52);
             this.splitContainer1.Panel1.Controls.Add(this.label62);
             this.splitContainer1.Panel1.Controls.Add(this.label54);
@@ -1083,7 +1085,6 @@
             this.radioButtonA0.Name = ("radioButtonA0");
             this.radioButtonA0.Size = (new global::System.Drawing.Size(17, 16));
             this.radioButtonA0.TabIndex = (17);
-            this.radioButtonA0.TabStop = (true);
             this.radioButtonA0.UseVisualStyleBackColor = (false);
             // 
             // labelY10
@@ -1230,7 +1231,6 @@
             this.radioButtonA4.Name = ("radioButtonA4");
             this.radioButtonA4.Size = (new global::System.Drawing.Size(17, 16));
             this.radioButtonA4.TabIndex = (5);
-            this.radioButtonA4.TabStop = (true);
             this.radioButtonA4.TextImageRelation = (global::System.Windows.Forms.TextImageRelation.TextBeforeImage);
             this.radioButtonA4.UseVisualStyleBackColor = (false);
             // 
@@ -1245,7 +1245,6 @@
             this.radioButtonA3.Name = ("radioButtonA3");
             this.radioButtonA3.Size = (new global::System.Drawing.Size(17, 16));
             this.radioButtonA3.TabIndex = (4);
-            this.radioButtonA3.TabStop = (true);
             this.radioButtonA3.TextImageRelation = (global::System.Windows.Forms.TextImageRelation.TextBeforeImage);
             this.radioButtonA3.UseVisualStyleBackColor = (false);
             // 
@@ -1260,7 +1259,6 @@
             this.radioButtonA2.Name = ("radioButtonA2");
             this.radioButtonA2.Size = (new global::System.Drawing.Size(17, 16));
             this.radioButtonA2.TabIndex = (3);
-            this.radioButtonA2.TabStop = (true);
             this.radioButtonA2.TextImageRelation = (global::System.Windows.Forms.TextImageRelation.TextBeforeImage);
             this.radioButtonA2.UseVisualStyleBackColor = (false);
             // 
@@ -1275,7 +1273,6 @@
             this.radioButtonA1.Name = ("radioButtonA1");
             this.radioButtonA1.Size = (new global::System.Drawing.Size(17, 16));
             this.radioButtonA1.TabIndex = (2);
-            this.radioButtonA1.TabStop = (true);
             this.radioButtonA1.TextImageRelation = (global::System.Windows.Forms.TextImageRelation.TextBeforeImage);
             this.radioButtonA1.UseVisualStyleBackColor = (false);
             // 
@@ -1548,7 +1545,54 @@
             this.groupBox2.TabIndex = (1);
             this.groupBox2.TabStop = (false);
             this.groupBox2.Text = ("Результаты вычислений");
-            this.groupBox2.Enter += (this.groupBox2_Enter);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = (true);
+            this.label40.Font = (new global::System.Drawing.Font("Segoe UI", 15.75F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.label40.Location = (new global::System.Drawing.Point(138, 46));
+            this.label40.Name = ("label40");
+            this.label40.Size = (new global::System.Drawing.Size(118, 37));
+            this.label40.TabIndex = (164);
+            this.label40.Text = ("Счётчик");
+            // 
+            // panel256
+            // 
+            this.panel256.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel256.Controls.Add(this.labelCount0);
+            this.panel256.Location = (new global::System.Drawing.Point(264, 114));
+            this.panel256.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel256.Name = ("panel256");
+            this.panel256.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel256.TabIndex = (49);
+            // 
+            // labelCount0
+            // 
+            this.labelCount0.AutoSize = (true);
+            this.labelCount0.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount0.Name = ("labelCount0");
+            this.labelCount0.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount0.TabIndex = (0);
+            this.labelCount0.Text = ("0");
+            // 
+            // panel257
+            // 
+            this.panel257.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel257.Controls.Add(this.labelCount1);
+            this.panel257.Location = (new global::System.Drawing.Point(242, 114));
+            this.panel257.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel257.Name = ("panel257");
+            this.panel257.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel257.TabIndex = (48);
+            // 
+            // labelCount1
+            // 
+            this.labelCount1.AutoSize = (true);
+            this.labelCount1.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount1.Name = ("labelCount1");
+            this.labelCount1.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount1.TabIndex = (0);
+            this.labelCount1.Text = ("0");
             // 
             // label19
             // 
@@ -1559,6 +1603,25 @@
             this.label19.Size = (new global::System.Drawing.Size(58, 37));
             this.label19.TabIndex = (163);
             this.label19.Text = ("AM");
+            // 
+            // panel258
+            // 
+            this.panel258.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel258.Controls.Add(this.label70);
+            this.panel258.Location = (new global::System.Drawing.Point(264, 87));
+            this.panel258.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel258.Name = ("panel258");
+            this.panel258.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel258.TabIndex = (41);
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = (true);
+            this.label70.Location = (new global::System.Drawing.Point(1, 3));
+            this.label70.Name = ("label70");
+            this.label70.Size = (new global::System.Drawing.Size(17, 20));
+            this.label70.TabIndex = (0);
+            this.label70.Text = ("0");
             // 
             // panel88
             // 
@@ -1579,6 +1642,25 @@
             this.labelResValueAM0.TabIndex = (0);
             this.labelResValueAM0.Text = ("0");
             // 
+            // panel259
+            // 
+            this.panel259.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel259.Controls.Add(this.labelCount4);
+            this.panel259.Location = (new global::System.Drawing.Point(173, 114));
+            this.panel259.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel259.Name = ("panel259");
+            this.panel259.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel259.TabIndex = (45);
+            // 
+            // labelCount4
+            // 
+            this.labelCount4.AutoSize = (true);
+            this.labelCount4.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount4.Name = ("labelCount4");
+            this.labelCount4.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount4.TabIndex = (0);
+            this.labelCount4.Text = ("0");
+            // 
             // panel193
             // 
             this.panel193.BackColor = (global::System.Drawing.SystemColors.Window);
@@ -1597,6 +1679,25 @@
             this.labelResValueAM1.Size = (new global::System.Drawing.Size(17, 20));
             this.labelResValueAM1.TabIndex = (0);
             this.labelResValueAM1.Text = ("0");
+            // 
+            // panel260
+            // 
+            this.panel260.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel260.Controls.Add(this.label78);
+            this.panel260.Location = (new global::System.Drawing.Point(242, 87));
+            this.panel260.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel260.Name = ("panel260");
+            this.panel260.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel260.TabIndex = (40);
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = (true);
+            this.label78.Location = (new global::System.Drawing.Point(1, 3));
+            this.label78.Name = ("label78");
+            this.label78.Size = (new global::System.Drawing.Size(17, 20));
+            this.label78.TabIndex = (0);
+            this.label78.Text = ("1");
             // 
             // panel194
             // 
@@ -1617,6 +1718,25 @@
             this.labelResValueAM16.TabIndex = (0);
             this.labelResValueAM16.Text = ("0");
             // 
+            // panel261
+            // 
+            this.panel261.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel261.Controls.Add(this.labelCount3);
+            this.panel261.Location = (new global::System.Drawing.Point(196, 114));
+            this.panel261.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel261.Name = ("panel261");
+            this.panel261.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel261.TabIndex = (46);
+            // 
+            // labelCount3
+            // 
+            this.labelCount3.AutoSize = (true);
+            this.labelCount3.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount3.Name = ("labelCount3");
+            this.labelCount3.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount3.TabIndex = (0);
+            this.labelCount3.Text = ("0");
+            // 
             // panel195
             // 
             this.panel195.BackColor = (global::System.Drawing.SystemColors.Info);
@@ -1635,6 +1755,25 @@
             this.label32.Size = (new global::System.Drawing.Size(17, 20));
             this.label32.TabIndex = (0);
             this.label32.Text = ("0");
+            // 
+            // panel262
+            // 
+            this.panel262.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel262.Controls.Add(this.label86);
+            this.panel262.Location = (new global::System.Drawing.Point(173, 87));
+            this.panel262.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel262.Name = ("panel262");
+            this.panel262.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel262.TabIndex = (37);
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = (true);
+            this.label86.Location = (new global::System.Drawing.Point(1, 3));
+            this.label86.Name = ("label86");
+            this.label86.Size = (new global::System.Drawing.Size(17, 20));
+            this.label86.TabIndex = (0);
+            this.label86.Text = ("4");
             // 
             // panel196
             // 
@@ -1655,6 +1794,25 @@
             this.labelResValueAM17.TabIndex = (0);
             this.labelResValueAM17.Text = ("0");
             // 
+            // panel263
+            // 
+            this.panel263.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel263.Controls.Add(this.labelCount5);
+            this.panel263.Location = (new global::System.Drawing.Point(150, 114));
+            this.panel263.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel263.Name = ("panel263");
+            this.panel263.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel263.TabIndex = (44);
+            // 
+            // labelCount5
+            // 
+            this.labelCount5.AutoSize = (true);
+            this.labelCount5.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount5.Name = ("labelCount5");
+            this.labelCount5.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount5.TabIndex = (0);
+            this.labelCount5.Text = ("0");
+            // 
             // panel197
             // 
             this.panel197.BackColor = (global::System.Drawing.SystemColors.Window);
@@ -1673,6 +1831,25 @@
             this.labelResValueAM4.Size = (new global::System.Drawing.Size(17, 20));
             this.labelResValueAM4.TabIndex = (0);
             this.labelResValueAM4.Text = ("0");
+            // 
+            // panel264
+            // 
+            this.panel264.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel264.Controls.Add(this.label94);
+            this.panel264.Location = (new global::System.Drawing.Point(196, 87));
+            this.panel264.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel264.Name = ("panel264");
+            this.panel264.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel264.TabIndex = (38);
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = (true);
+            this.label94.Location = (new global::System.Drawing.Point(1, 3));
+            this.label94.Name = ("label94");
+            this.label94.Size = (new global::System.Drawing.Size(17, 20));
+            this.label94.TabIndex = (0);
+            this.label94.Text = ("3");
             // 
             // panel198
             // 
@@ -1693,6 +1870,25 @@
             this.label44.TabIndex = (0);
             this.label44.Text = ("16");
             // 
+            // panel265
+            // 
+            this.panel265.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel265.Controls.Add(this.labelCount2);
+            this.panel265.Location = (new global::System.Drawing.Point(219, 114));
+            this.panel265.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel265.Name = ("panel265");
+            this.panel265.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel265.TabIndex = (47);
+            // 
+            // labelCount2
+            // 
+            this.labelCount2.AutoSize = (true);
+            this.labelCount2.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount2.Name = ("labelCount2");
+            this.labelCount2.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount2.TabIndex = (0);
+            this.labelCount2.Text = ("0");
+            // 
             // panel199
             // 
             this.panel199.BackColor = (global::System.Drawing.SystemColors.Info);
@@ -1711,6 +1907,25 @@
             this.label48.Size = (new global::System.Drawing.Size(17, 20));
             this.label48.TabIndex = (0);
             this.label48.Text = ("1");
+            // 
+            // panel266
+            // 
+            this.panel266.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel266.Controls.Add(this.label104);
+            this.panel266.Location = (new global::System.Drawing.Point(150, 87));
+            this.panel266.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel266.Name = ("panel266");
+            this.panel266.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel266.TabIndex = (36);
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = (true);
+            this.label104.Location = (new global::System.Drawing.Point(1, 3));
+            this.label104.Name = ("label104");
+            this.label104.Size = (new global::System.Drawing.Size(17, 20));
+            this.label104.TabIndex = (0);
+            this.label104.Text = ("5");
             // 
             // panel200
             // 
@@ -1731,6 +1946,25 @@
             this.labelResValueAM20.TabIndex = (0);
             this.labelResValueAM20.Text = ("0");
             // 
+            // panel267
+            // 
+            this.panel267.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel267.Controls.Add(this.label106);
+            this.panel267.Location = (new global::System.Drawing.Point(219, 87));
+            this.panel267.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel267.Name = ("panel267");
+            this.panel267.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel267.TabIndex = (39);
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = (true);
+            this.label106.Location = (new global::System.Drawing.Point(1, 3));
+            this.label106.Name = ("label106");
+            this.label106.Size = (new global::System.Drawing.Size(17, 20));
+            this.label106.TabIndex = (0);
+            this.label106.Text = ("2");
+            // 
             // panel201
             // 
             this.panel201.BackColor = (global::System.Drawing.SystemColors.Window);
@@ -1749,6 +1983,25 @@
             this.labelResValueAM3.Size = (new global::System.Drawing.Size(17, 20));
             this.labelResValueAM3.TabIndex = (0);
             this.labelResValueAM3.Text = ("0");
+            // 
+            // panel268
+            // 
+            this.panel268.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel268.Controls.Add(this.labelCount7);
+            this.panel268.Location = (new global::System.Drawing.Point(104, 114));
+            this.panel268.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel268.Name = ("panel268");
+            this.panel268.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel268.TabIndex = (42);
+            // 
+            // labelCount7
+            // 
+            this.labelCount7.AutoSize = (true);
+            this.labelCount7.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount7.Name = ("labelCount7");
+            this.labelCount7.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount7.TabIndex = (0);
+            this.labelCount7.Text = ("0");
             // 
             // panel202
             // 
@@ -1769,6 +2022,25 @@
             this.label56.TabIndex = (0);
             this.label56.Text = ("17");
             // 
+            // panel269
+            // 
+            this.panel269.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel269.Controls.Add(this.label114);
+            this.panel269.Location = (new global::System.Drawing.Point(104, 87));
+            this.panel269.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel269.Name = ("panel269");
+            this.panel269.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel269.TabIndex = (34);
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = (true);
+            this.label114.Location = (new global::System.Drawing.Point(1, 3));
+            this.label114.Name = ("label114");
+            this.label114.Size = (new global::System.Drawing.Size(17, 20));
+            this.label114.TabIndex = (0);
+            this.label114.Text = ("7");
+            // 
             // panel203
             // 
             this.panel203.BackColor = (global::System.Drawing.SystemColors.Info);
@@ -1788,6 +2060,25 @@
             this.label60.TabIndex = (0);
             this.label60.Text = ("4");
             // 
+            // panel270
+            // 
+            this.panel270.BackColor = (global::System.Drawing.SystemColors.Window);
+            this.panel270.Controls.Add(this.labelCount6);
+            this.panel270.Location = (new global::System.Drawing.Point(127, 114));
+            this.panel270.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel270.Name = ("panel270");
+            this.panel270.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel270.TabIndex = (43);
+            // 
+            // labelCount6
+            // 
+            this.labelCount6.AutoSize = (true);
+            this.labelCount6.Location = (new global::System.Drawing.Point(1, 3));
+            this.labelCount6.Name = ("labelCount6");
+            this.labelCount6.Size = (new global::System.Drawing.Size(17, 20));
+            this.labelCount6.TabIndex = (0);
+            this.labelCount6.Text = ("0");
+            // 
             // panel204
             // 
             this.panel204.BackColor = (global::System.Drawing.SystemColors.Window);
@@ -1806,6 +2097,25 @@
             this.labelResValueAM19.Size = (new global::System.Drawing.Size(17, 20));
             this.labelResValueAM19.TabIndex = (0);
             this.labelResValueAM19.Text = ("0");
+            // 
+            // panel271
+            // 
+            this.panel271.BackColor = (global::System.Drawing.SystemColors.Info);
+            this.panel271.Controls.Add(this.label122);
+            this.panel271.Location = (new global::System.Drawing.Point(127, 87));
+            this.panel271.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
+            this.panel271.Name = ("panel271");
+            this.panel271.Size = (new global::System.Drawing.Size(23, 27));
+            this.panel271.TabIndex = (35);
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = (true);
+            this.label122.Location = (new global::System.Drawing.Point(1, 3));
+            this.label122.Name = ("label122");
+            this.label122.Size = (new global::System.Drawing.Size(17, 20));
+            this.label122.TabIndex = (0);
+            this.label122.Text = ("6");
             // 
             // panel205
             // 
@@ -6607,319 +6917,15 @@
             this.label1.TabIndex = (0);
             this.label1.Text = ("A");
             // 
-            // panel256
-            // 
-            this.panel256.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel256.Controls.Add(this.labelCount0);
-            this.panel256.Location = (new global::System.Drawing.Point(264, 114));
-            this.panel256.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel256.Name = ("panel256");
-            this.panel256.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel256.TabIndex = (49);
-            // 
-            // labelCount0
-            // 
-            this.labelCount0.AutoSize = (true);
-            this.labelCount0.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount0.Name = ("labelCount0");
-            this.labelCount0.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount0.TabIndex = (0);
-            this.labelCount0.Text = ("0");
-            // 
-            // panel257
-            // 
-            this.panel257.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel257.Controls.Add(this.labelCount1);
-            this.panel257.Location = (new global::System.Drawing.Point(242, 114));
-            this.panel257.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel257.Name = ("panel257");
-            this.panel257.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel257.TabIndex = (48);
-            // 
-            // labelCount1
-            // 
-            this.labelCount1.AutoSize = (true);
-            this.labelCount1.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount1.Name = ("labelCount1");
-            this.labelCount1.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount1.TabIndex = (0);
-            this.labelCount1.Text = ("0");
-            // 
-            // panel258
-            // 
-            this.panel258.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel258.Controls.Add(this.label70);
-            this.panel258.Location = (new global::System.Drawing.Point(264, 87));
-            this.panel258.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel258.Name = ("panel258");
-            this.panel258.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel258.TabIndex = (41);
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = (true);
-            this.label70.Location = (new global::System.Drawing.Point(1, 3));
-            this.label70.Name = ("label70");
-            this.label70.Size = (new global::System.Drawing.Size(17, 20));
-            this.label70.TabIndex = (0);
-            this.label70.Text = ("0");
-            // 
-            // panel259
-            // 
-            this.panel259.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel259.Controls.Add(this.labelCount4);
-            this.panel259.Location = (new global::System.Drawing.Point(173, 114));
-            this.panel259.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel259.Name = ("panel259");
-            this.panel259.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel259.TabIndex = (45);
-            // 
-            // labelCount4
-            // 
-            this.labelCount4.AutoSize = (true);
-            this.labelCount4.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount4.Name = ("labelCount4");
-            this.labelCount4.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount4.TabIndex = (0);
-            this.labelCount4.Text = ("0");
-            // 
-            // panel260
-            // 
-            this.panel260.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel260.Controls.Add(this.label78);
-            this.panel260.Location = (new global::System.Drawing.Point(242, 87));
-            this.panel260.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel260.Name = ("panel260");
-            this.panel260.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel260.TabIndex = (40);
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = (true);
-            this.label78.Location = (new global::System.Drawing.Point(1, 3));
-            this.label78.Name = ("label78");
-            this.label78.Size = (new global::System.Drawing.Size(17, 20));
-            this.label78.TabIndex = (0);
-            this.label78.Text = ("1");
-            // 
-            // panel261
-            // 
-            this.panel261.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel261.Controls.Add(this.labelCount3);
-            this.panel261.Location = (new global::System.Drawing.Point(196, 114));
-            this.panel261.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel261.Name = ("panel261");
-            this.panel261.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel261.TabIndex = (46);
-            // 
-            // labelCount3
-            // 
-            this.labelCount3.AutoSize = (true);
-            this.labelCount3.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount3.Name = ("labelCount3");
-            this.labelCount3.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount3.TabIndex = (0);
-            this.labelCount3.Text = ("0");
-            // 
-            // panel262
-            // 
-            this.panel262.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel262.Controls.Add(this.label86);
-            this.panel262.Location = (new global::System.Drawing.Point(173, 87));
-            this.panel262.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel262.Name = ("panel262");
-            this.panel262.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel262.TabIndex = (37);
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = (true);
-            this.label86.Location = (new global::System.Drawing.Point(1, 3));
-            this.label86.Name = ("label86");
-            this.label86.Size = (new global::System.Drawing.Size(17, 20));
-            this.label86.TabIndex = (0);
-            this.label86.Text = ("4");
-            // 
-            // panel263
-            // 
-            this.panel263.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel263.Controls.Add(this.labelCount5);
-            this.panel263.Location = (new global::System.Drawing.Point(150, 114));
-            this.panel263.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel263.Name = ("panel263");
-            this.panel263.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel263.TabIndex = (44);
-            // 
-            // labelCount5
-            // 
-            this.labelCount5.AutoSize = (true);
-            this.labelCount5.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount5.Name = ("labelCount5");
-            this.labelCount5.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount5.TabIndex = (0);
-            this.labelCount5.Text = ("0");
-            // 
-            // panel264
-            // 
-            this.panel264.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel264.Controls.Add(this.label94);
-            this.panel264.Location = (new global::System.Drawing.Point(196, 87));
-            this.panel264.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel264.Name = ("panel264");
-            this.panel264.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel264.TabIndex = (38);
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = (true);
-            this.label94.Location = (new global::System.Drawing.Point(1, 3));
-            this.label94.Name = ("label94");
-            this.label94.Size = (new global::System.Drawing.Size(17, 20));
-            this.label94.TabIndex = (0);
-            this.label94.Text = ("3");
-            // 
-            // panel265
-            // 
-            this.panel265.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel265.Controls.Add(this.labelCount2);
-            this.panel265.Location = (new global::System.Drawing.Point(219, 114));
-            this.panel265.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel265.Name = ("panel265");
-            this.panel265.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel265.TabIndex = (47);
-            // 
-            // labelCount2
-            // 
-            this.labelCount2.AutoSize = (true);
-            this.labelCount2.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount2.Name = ("labelCount2");
-            this.labelCount2.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount2.TabIndex = (0);
-            this.labelCount2.Text = ("0");
-            // 
-            // panel266
-            // 
-            this.panel266.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel266.Controls.Add(this.label104);
-            this.panel266.Location = (new global::System.Drawing.Point(150, 87));
-            this.panel266.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel266.Name = ("panel266");
-            this.panel266.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel266.TabIndex = (36);
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = (true);
-            this.label104.Location = (new global::System.Drawing.Point(1, 3));
-            this.label104.Name = ("label104");
-            this.label104.Size = (new global::System.Drawing.Size(17, 20));
-            this.label104.TabIndex = (0);
-            this.label104.Text = ("5");
-            // 
-            // panel267
-            // 
-            this.panel267.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel267.Controls.Add(this.label106);
-            this.panel267.Location = (new global::System.Drawing.Point(219, 87));
-            this.panel267.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel267.Name = ("panel267");
-            this.panel267.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel267.TabIndex = (39);
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = (true);
-            this.label106.Location = (new global::System.Drawing.Point(1, 3));
-            this.label106.Name = ("label106");
-            this.label106.Size = (new global::System.Drawing.Size(17, 20));
-            this.label106.TabIndex = (0);
-            this.label106.Text = ("2");
-            // 
-            // panel268
-            // 
-            this.panel268.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel268.Controls.Add(this.labelCount7);
-            this.panel268.Location = (new global::System.Drawing.Point(104, 114));
-            this.panel268.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel268.Name = ("panel268");
-            this.panel268.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel268.TabIndex = (42);
-            // 
-            // labelCount7
-            // 
-            this.labelCount7.AutoSize = (true);
-            this.labelCount7.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount7.Name = ("labelCount7");
-            this.labelCount7.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount7.TabIndex = (0);
-            this.labelCount7.Text = ("0");
-            // 
-            // panel269
-            // 
-            this.panel269.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel269.Controls.Add(this.label114);
-            this.panel269.Location = (new global::System.Drawing.Point(104, 87));
-            this.panel269.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel269.Name = ("panel269");
-            this.panel269.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel269.TabIndex = (34);
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = (true);
-            this.label114.Location = (new global::System.Drawing.Point(1, 3));
-            this.label114.Name = ("label114");
-            this.label114.Size = (new global::System.Drawing.Size(17, 20));
-            this.label114.TabIndex = (0);
-            this.label114.Text = ("7");
-            // 
-            // panel270
-            // 
-            this.panel270.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.panel270.Controls.Add(this.labelCount6);
-            this.panel270.Location = (new global::System.Drawing.Point(127, 114));
-            this.panel270.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel270.Name = ("panel270");
-            this.panel270.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel270.TabIndex = (43);
-            // 
-            // labelCount6
-            // 
-            this.labelCount6.AutoSize = (true);
-            this.labelCount6.Location = (new global::System.Drawing.Point(1, 3));
-            this.labelCount6.Name = ("labelCount6");
-            this.labelCount6.Size = (new global::System.Drawing.Size(17, 20));
-            this.labelCount6.TabIndex = (0);
-            this.labelCount6.Text = ("0");
-            // 
-            // panel271
-            // 
-            this.panel271.BackColor = (global::System.Drawing.SystemColors.Info);
-            this.panel271.Controls.Add(this.label122);
-            this.panel271.Location = (new global::System.Drawing.Point(127, 87));
-            this.panel271.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
-            this.panel271.Name = ("panel271");
-            this.panel271.Size = (new global::System.Drawing.Size(23, 27));
-            this.panel271.TabIndex = (35);
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = (true);
-            this.label122.Location = (new global::System.Drawing.Point(1, 3));
-            this.label122.Name = ("label122");
-            this.label122.Size = (new global::System.Drawing.Size(17, 20));
-            this.label122.TabIndex = (0);
-            this.label122.Text = ("6");
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = (true);
-            this.label40.Font = (new global::System.Drawing.Font("Segoe UI", 15.75F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
-            this.label40.Location = (new global::System.Drawing.Point(138, 46));
-            this.label40.Name = ("label40");
-            this.label40.Size = (new global::System.Drawing.Size(118, 37));
-            this.label40.TabIndex = (164);
-            this.label40.Text = ("Счётчик");
+            // checkBoxX0
+            // 
+            this.checkBoxX0.AutoSize = (true);
+            this.checkBoxX0.Location = (new global::System.Drawing.Point(462, 123));
+            this.checkBoxX0.Name = ("checkBoxX0");
+            this.checkBoxX0.Size = (new global::System.Drawing.Size(48, 24));
+            this.checkBoxX0.TabIndex = (26);
+            this.checkBoxX0.Text = ("X0");
+            this.checkBoxX0.UseVisualStyleBackColor = (true);
             // 
             // Form1
             // 
@@ -6942,32 +6948,64 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel256.ResumeLayout(false);
+            this.panel256.PerformLayout();
+            this.panel257.ResumeLayout(false);
+            this.panel257.PerformLayout();
+            this.panel258.ResumeLayout(false);
+            this.panel258.PerformLayout();
             this.panel88.ResumeLayout(false);
             this.panel88.PerformLayout();
+            this.panel259.ResumeLayout(false);
+            this.panel259.PerformLayout();
             this.panel193.ResumeLayout(false);
             this.panel193.PerformLayout();
+            this.panel260.ResumeLayout(false);
+            this.panel260.PerformLayout();
             this.panel194.ResumeLayout(false);
             this.panel194.PerformLayout();
+            this.panel261.ResumeLayout(false);
+            this.panel261.PerformLayout();
             this.panel195.ResumeLayout(false);
             this.panel195.PerformLayout();
+            this.panel262.ResumeLayout(false);
+            this.panel262.PerformLayout();
             this.panel196.ResumeLayout(false);
             this.panel196.PerformLayout();
+            this.panel263.ResumeLayout(false);
+            this.panel263.PerformLayout();
             this.panel197.ResumeLayout(false);
             this.panel197.PerformLayout();
+            this.panel264.ResumeLayout(false);
+            this.panel264.PerformLayout();
             this.panel198.ResumeLayout(false);
             this.panel198.PerformLayout();
+            this.panel265.ResumeLayout(false);
+            this.panel265.PerformLayout();
             this.panel199.ResumeLayout(false);
             this.panel199.PerformLayout();
+            this.panel266.ResumeLayout(false);
+            this.panel266.PerformLayout();
             this.panel200.ResumeLayout(false);
             this.panel200.PerformLayout();
+            this.panel267.ResumeLayout(false);
+            this.panel267.PerformLayout();
             this.panel201.ResumeLayout(false);
             this.panel201.PerformLayout();
+            this.panel268.ResumeLayout(false);
+            this.panel268.PerformLayout();
             this.panel202.ResumeLayout(false);
             this.panel202.PerformLayout();
+            this.panel269.ResumeLayout(false);
+            this.panel269.PerformLayout();
             this.panel203.ResumeLayout(false);
             this.panel203.PerformLayout();
+            this.panel270.ResumeLayout(false);
+            this.panel270.PerformLayout();
             this.panel204.ResumeLayout(false);
             this.panel204.PerformLayout();
+            this.panel271.ResumeLayout(false);
+            this.panel271.PerformLayout();
             this.panel205.ResumeLayout(false);
             this.panel205.PerformLayout();
             this.panel206.ResumeLayout(false);
@@ -7456,38 +7494,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel256.ResumeLayout(false);
-            this.panel256.PerformLayout();
-            this.panel257.ResumeLayout(false);
-            this.panel257.PerformLayout();
-            this.panel258.ResumeLayout(false);
-            this.panel258.PerformLayout();
-            this.panel259.ResumeLayout(false);
-            this.panel259.PerformLayout();
-            this.panel260.ResumeLayout(false);
-            this.panel260.PerformLayout();
-            this.panel261.ResumeLayout(false);
-            this.panel261.PerformLayout();
-            this.panel262.ResumeLayout(false);
-            this.panel262.PerformLayout();
-            this.panel263.ResumeLayout(false);
-            this.panel263.PerformLayout();
-            this.panel264.ResumeLayout(false);
-            this.panel264.PerformLayout();
-            this.panel265.ResumeLayout(false);
-            this.panel265.PerformLayout();
-            this.panel266.ResumeLayout(false);
-            this.panel266.PerformLayout();
-            this.panel267.ResumeLayout(false);
-            this.panel267.PerformLayout();
-            this.panel268.ResumeLayout(false);
-            this.panel268.PerformLayout();
-            this.panel269.ResumeLayout(false);
-            this.panel269.PerformLayout();
-            this.panel270.ResumeLayout(false);
-            this.panel270.PerformLayout();
-            this.panel271.ResumeLayout(false);
-            this.panel271.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -8083,5 +8089,6 @@
         private global::System.Windows.Forms.Panel panel271;
         private global::System.Windows.Forms.Label label122;
         private global::System.Windows.Forms.Label label40;
+        internal global::System.Windows.Forms.CheckBox checkBoxX0;
     }
 }

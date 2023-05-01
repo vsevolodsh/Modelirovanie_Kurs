@@ -76,11 +76,6 @@ namespace Modelirovanie_Kurs
             strValueB = "";
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void моделированиеЌа”ровнећикропрограммыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             isMicroProgMode = true;
@@ -105,14 +100,13 @@ namespace Modelirovanie_Kurs
             variables.B = Convert.ToUInt16(strValueB, 2);
             strValueA = "";
             strValueB = "";
-            if (isMicroProgMode)
+            if (isMicroProgMode && checkBoxX0.Checked)
             {
                 mmp.X0 = true;
             }
             else
             {
-                operatingDevice = new(variables);
-                operatingDevice.ConditionsX[0] = true;
+                operatingDevice = new(variables, this);
                 operatingDevice.FillConditionsXArray();
                 stAndCndtMemory.ConditionsX = operatingDevice.ConditionsX;
                 controlDevice = new(stAndCndtMemory, cmbScheme_D, cmbScheme_Y, operatingDevice);
@@ -180,19 +174,23 @@ namespace Modelirovanie_Kurs
             char[] arrCharAM = variables.ToCharArray(variables.AM);
             char[] arrCharC = variables.ToCharArray(variables.C);
             char[] arrCharCount = variables.ToCharArray(variables.Count);
-            for (int i = 0; i < arrResValueB.Length; i++)
-            {
-                if (i <= arrCharB.Length - 1)
-                    arrResValueB[i].Text = arrCharB[i].ToString();
-                else
-                    arrResValueB[i].Text = "0";
-            }
+            //for (int i = 0; i < arrResValueB.Length; i++)
+            //{
+            //    if (i <= arrCharB.Length - 1)
+            //        arrResValueB[i].Text = arrCharB[i].ToString();
+            //    else
+            //        arrResValueB[i].Text = "0";
+            //}
             for (int i = 0; i < arrResValueA.Length; i++)
             {
                 if (i <= arrCharA.Length - 1)
                     arrResValueA[i].Text = arrCharA[i].ToString();
                 else
                     arrResValueA[i].Text = "0";
+                if (i <= arrCharB.Length - 1)
+                    arrResValueB[i].Text = arrCharB[i].ToString();
+                else
+                    arrResValueB[i].Text = "0";
             }
 
             for (int i = 0; i < arrResValueAM.Length; i++)
@@ -254,6 +252,7 @@ namespace Modelirovanie_Kurs
                 checkBoxY1_Y4.Checked = true;
                 radioButtonA1.Checked = true;
                 firstTact = false;
+                checkBoxX0.Checked = false;
             }
             else if (statesA[2])
             {
@@ -287,16 +286,6 @@ namespace Modelirovanie_Kurs
             checkBoxY6_Y8.Checked = false;
             checkBoxY9.Checked = false;
             checkBoxY10.Checked = false;
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
 
         }
     }

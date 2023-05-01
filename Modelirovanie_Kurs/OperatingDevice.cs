@@ -5,10 +5,12 @@
         Variables _variables;
         public bool[] ConditionsX = new bool[7];
         readonly Action[] _doOperationsY;
+        Form1 form1;
 
-        public OperatingDevice(Variables variables)
+        public OperatingDevice(Variables variables, Form1 form1)
         {
             _variables = variables;
+            this.form1 = form1;
             _doOperationsY = new Action[]
             {
              () => {_variables.C = 0;}, //y1
@@ -25,6 +27,7 @@
         }
         public void FillConditionsXArray()
         {
+            ConditionsX[0] = form1.checkBoxX0.Checked;
             ConditionsX[1] = (_variables.A & 0x7fff) == 0;
             ConditionsX[2] = (_variables.B & 0x7fff) == 0;
             ConditionsX[3] = (_variables.B & 0x4000) != 0;
