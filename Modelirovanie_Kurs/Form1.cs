@@ -17,13 +17,19 @@ namespace Modelirovanie_Kurs
         Label[] arrResValueAM;
         Label[] arrResValueC;
         Label[] arrCurrentCount;
+        Label[] arrStateMemory;
+        Label[] arrDecoder;
+        Label[] arrCS_D;
+        Label[] arrCS_Y;
+        Label[] arrStateConditions;
+
         string strValueA = "";
         string strValueB = "";
         bool isOver = false;
         public Form1()
         {
             InitializeComponent();
-            mmp = new ModelMircoProg(variables);
+            mmp = new ModelMircoProg(variables, this);
 
             arrStartValueA = new Label[] {labelStartValueA0, labelStartValueA1, labelStartValueA2, labelStartValueA3, labelStartValueA4, labelStartValueA5,
                 labelStartValueA6, labelStartValueA7, labelStartValueA8, labelStartValueA9, labelStartValueA10, labelStartValueA11, labelStartValueA12,
@@ -54,12 +60,23 @@ namespace Modelirovanie_Kurs
                 labelResValueC27,labelResValueC28, labelResValueC29, labelResValueC30, labelResValueC31};
 
             arrCurrentCount = new Label[] { labelCount0, labelCount1, labelCount2, labelCount3, labelCount4, labelCount5, labelCount6, labelCount7 };
+
+            arrStateMemory = new Label[] { labelStMemory0, labelStMemory1 };
+
+            arrDecoder = new Label[] { labelStateA0, labelStateA1, labelStateA2, labelStateA3 };
+
+            arrCS_D = new Label[] { labelCS_D0, labelCS_D1 };
+
+            arrCS_Y = new Label[] { labelCS_Y1, labelCS_Y2, labelCS_Y3, labelCS_Y4, labelCS_Y5, labelCS_Y6, labelCS_Y7, labelCS_Y8, labelCS_Y9 };
+
+            arrStateConditions = new Label[] { labelCondMemory0, labelCondMemory1, labelCondMemory2, labelCondMemory3,
+                labelCondMemory4, labelCondMemory5, labelCondMemory6};
         }
 
-        private void labelStartValue_Click(object sender, EventArgs e)
+        private void labelStartValue_Click(object sender, EventArgs e) //метод для установки значений А и В
         {
             Label lbl = sender as Label;
-            lbl.Text = lbl.Text.Equals("0") ? "1" : "0";
+            lbl.Text = lbl.Text.Equals("0") ? "1" : "0"; //Если текущее значение ячейки 0 - ставим 1 и наоборот
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,32 +108,30 @@ namespace Modelirovanie_Kurs
             radioButtonA0.Checked = true;
             buttonTact.Enabled = true;
 
-            for (int i = arrStartValueA.Length - 1; i >= 0; i--)
+            for (int i = arrStartValueA.Length - 1; i >= 0; i--) // считываем значения А и B 
             {
                 strValueA += arrStartValueA[i].Text;
                 strValueB += arrStartValueB[i].Text;
             }
+            // Из строк получаем число в двоичном представлении
             variables.A = Convert.ToUInt16(strValueA, 2);
             variables.B = Convert.ToUInt16(strValueB, 2);
             strValueA = "";
             strValueB = "";
-            if (isMicroProgMode && checkBoxX0.Checked)
-            {
-                mmp.X0 = true;
-            }
-            else
+            if (!isMicroProgMode) // Если моделирование ОА УА - выполняем первый такт УА, чтобы перейти в состояние А0
             {
                 operatingDevice = new(variables, this);
                 operatingDevice.FillConditionsXArray();
                 stAndCndtMemory.ConditionsX = operatingDevice.ConditionsX;
                 controlDevice = new(stAndCndtMemory, cmbScheme_D, cmbScheme_Y, operatingDevice);
-                controlDevice.ExecuteTact();
+                // controlDevice.ExecuteTact();
             }
         }
         bool firstTact = true;
         private void buttonTact_Click(object sender, EventArgs e)
         {
-            if (isMicroProgMode)
+            if (isMicroProgMode) //Если моделирование на уровне МП - выполняем один такт, обновляем переменные,
+                                 //обновляем флаги на интерфейсе
             {
                 mmp.ExecuteTact();
                 UpdateVar();
@@ -127,22 +142,21 @@ namespace Modelirovanie_Kurs
                     buttonTact.Enabled = false;
                 }
             }
-            else
+            else //Если моделирование на уровне ОА УА - выполняем один такт, обновляем переменные,
+                 //обновляем флаги на интерфейсе
             {
-
                 controlDevice.ExecuteTact();
                 UpdateVar();
                 UpdateInterfaceFlags();
-                if (stAndCndtMemory.ArrStateA[0] && isOver)
+                UpdateScheme();
+                if (stAndCndtMemory.StateCode[0] && isOver)
                 {
                     MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
                     buttonTact.Enabled = false;
                 }
             }
-
         }
-
-        private void buttonAuto_Click(object sender, EventArgs e)
+        private void buttonAuto_Click(object sender, EventArgs e) // Выполнение работы в автомат. режиме
         {
             if (isMicroProgMode)
             {
@@ -169,18 +183,13 @@ namespace Modelirovanie_Kurs
 
         private void UpdateVar()
         {
+            // Получаем массив символов для всех переменных, где каждый элемент - значение разряда числа
             char[] arrCharB = variables.ToCharArray(variables.B);
             char[] arrCharA = variables.ToCharArray(variables.A);
             char[] arrCharAM = variables.ToCharArray(variables.AM);
             char[] arrCharC = variables.ToCharArray(variables.C);
             char[] arrCharCount = variables.ToCharArray(variables.Count);
-            //for (int i = 0; i < arrResValueB.Length; i++)
-            //{
-            //    if (i <= arrCharB.Length - 1)
-            //        arrResValueB[i].Text = arrCharB[i].ToString();
-            //    else
-            //        arrResValueB[i].Text = "0";
-            //}
+            // Переписываем посимвольно в форму для отображения числа в двоичном коде, пустые старшие разряды заполняем 0
             for (int i = 0; i < arrResValueA.Length; i++)
             {
                 if (i <= arrCharA.Length - 1)
@@ -192,17 +201,12 @@ namespace Modelirovanie_Kurs
                 else
                     arrResValueB[i].Text = "0";
             }
-
             for (int i = 0; i < arrResValueAM.Length; i++)
             {
                 if (i <= arrCharAM.Length - 1)
                     arrResValueAM[i].Text = arrCharAM[i].ToString();
                 else
                     arrResValueAM[i].Text = "0";
-            }
-
-            for (int i = 0; i < arrResValueC.Length; i++)
-            {
                 if (i <= arrCharC.Length - 1)
                     arrResValueC[i].Text = arrCharC[i].ToString();
                 else
@@ -216,7 +220,6 @@ namespace Modelirovanie_Kurs
                     arrCurrentCount[i].Text = "0";
             }
         }
-
         private void UpdateInterfaceFlags()
         {
             bool[] statesA = new bool[4];
@@ -226,9 +229,9 @@ namespace Modelirovanie_Kurs
             }
             else
             {
-                statesA = stAndCndtMemory.ArrStateA;
+                statesA = stAndCndtMemory.StateCode;
             }
-            SetAllFlagsFalse();
+            SetAllFlagsFalse(); // устанавливаем все флаги ложными
             if (statesA[0])
             {
                 if ((mmp.IsCSet0 || cmbScheme_Y.OperationsY[0]) && firstTact)
@@ -272,7 +275,6 @@ namespace Modelirovanie_Kurs
                 radioButtonA3.Checked = true;
             }
         }
-
         private void SetAllFlagsFalse()
         {
             radioButtonA0.Checked = false;
@@ -286,6 +288,33 @@ namespace Modelirovanie_Kurs
             checkBoxY6_Y8.Checked = false;
             checkBoxY9.Checked = false;
             checkBoxY10.Checked = false;
+
+        }
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            SetAllFlagsFalse();
+        }
+
+        private void UpdateScheme()
+        {
+            for (int i = 0; i < arrCS_Y.Length; i++)
+            {
+                if (i < arrCS_D.Length)
+                {
+                    arrCS_D[i].Text = cmbScheme_D.NextStateCode[i] == true ? "1" : "0";
+                }
+                if (i < arrDecoder.Length)
+                {
+                    arrDecoder[i].Text = stAndCndtMemory.StateCode[i] == true ? "1" : "0";
+                }
+                if (i < arrStateConditions.Length)
+                {
+                    arrStateConditions[i].Text = stAndCndtMemory.ConditionsX[i] == true ? "1" : "0";
+                }
+                arrCS_Y[i].Text = cmbScheme_Y.OperationsY[i] == true ? "1" : "0";
+                //arrStateMemory[i] = stAndCndtMemory.
+
+            }
 
         }
     }
