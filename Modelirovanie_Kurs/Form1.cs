@@ -79,20 +79,6 @@ namespace Modelirovanie_Kurs
             lbl.Text = lbl.Text.Equals("0") ? "1" : "0"; //Если текущее значение ячейки 0 - ставим 1 и наоборот
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            for (int i = arrStartValueA.Length - 1; i >= 0; i--)
-            {
-                strValueA += arrStartValueA[i].Text;
-                strValueB += arrStartValueB[i].Text;
-            }
-            ushort a = Convert.ToUInt16(strValueA, 2);
-            ushort b = Convert.ToUInt16(strValueB, 2);
-            MessageBox.Show($"a = {a},  " + strValueA + $"\n b = {b}, " + strValueB);
-            strValueA = "";
-            strValueB = "";
-        }
-
         private void моделированиеНаУровнеМикропрограммыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             isMicroProgMode = true;
@@ -124,7 +110,8 @@ namespace Modelirovanie_Kurs
                 operatingDevice.FillConditionsXArray();
                 stAndCndtMemory.ConditionsX = operatingDevice.ConditionsX;
                 controlDevice = new(stAndCndtMemory, cmbScheme_D, cmbScheme_Y, operatingDevice);
-                // controlDevice.ExecuteTact();
+                controlDevice.ExecuteTact();
+                UpdateScheme();
             }
         }
         bool firstTact = true;
@@ -138,7 +125,7 @@ namespace Modelirovanie_Kurs
                 UpdateInterfaceFlags();
                 if (mmp.ArrStateA[0])
                 {
-                    MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+                    MessageBox.Show($"Умножение окончено.");
                     buttonTact.Enabled = false;
                 }
             }
@@ -149,9 +136,9 @@ namespace Modelirovanie_Kurs
                 UpdateVar();
                 UpdateInterfaceFlags();
                 UpdateScheme();
-                if (stAndCndtMemory.StateCode[0] && isOver)
+                if (stAndCndtMemory.ArrStateA[0] && isOver)
                 {
-                    MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+                    MessageBox.Show($"Умножение окончено.");
                     buttonTact.Enabled = false;
                 }
             }
@@ -166,7 +153,7 @@ namespace Modelirovanie_Kurs
                     UpdateVar();
                     UpdateInterfaceFlags();
                 } while (!mmp.ArrStateA[0]);
-                MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+                MessageBox.Show($"Умножение окончено.");
             }
             else
             {
@@ -176,7 +163,7 @@ namespace Modelirovanie_Kurs
                     UpdateVar();
                     UpdateInterfaceFlags();
                 } while (!isOver);
-                MessageBox.Show($"Умножение окончено. Результат: {variables.C}");
+                MessageBox.Show($"Умножение окончено.");
             }
             buttonAuto.Enabled = false;
         }
@@ -229,7 +216,7 @@ namespace Modelirovanie_Kurs
             }
             else
             {
-                statesA = stAndCndtMemory.StateCode;
+                statesA = stAndCndtMemory.ArrStateA;
             }
             SetAllFlagsFalse(); // устанавливаем все флаги ложными
             if (statesA[0])
@@ -301,19 +288,18 @@ namespace Modelirovanie_Kurs
             {
                 if (i < arrCS_D.Length)
                 {
+                    arrStateMemory[i].Text = stAndCndtMemory.CurrentStateCode[i] == true? "1": "0";
                     arrCS_D[i].Text = cmbScheme_D.NextStateCode[i] == true ? "1" : "0";
                 }
                 if (i < arrDecoder.Length)
                 {
-                    arrDecoder[i].Text = stAndCndtMemory.StateCode[i] == true ? "1" : "0";
+                    arrDecoder[i].Text = stAndCndtMemory.ArrStateA[i] == true ? "1" : "0";
                 }
                 if (i < arrStateConditions.Length)
                 {
                     arrStateConditions[i].Text = stAndCndtMemory.ConditionsX[i] == true ? "1" : "0";
                 }
                 arrCS_Y[i].Text = cmbScheme_Y.OperationsY[i] == true ? "1" : "0";
-                //arrStateMemory[i] = stAndCndtMemory.
-
             }
 
         }

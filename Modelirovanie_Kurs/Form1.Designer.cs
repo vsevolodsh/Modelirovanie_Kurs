@@ -6730,6 +6730,7 @@
             // 
             // buttonAuto
             // 
+            this.buttonAuto.Enabled = (false);
             this.buttonAuto.Location = (new global::System.Drawing.Point(627, 33));
             this.buttonAuto.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.buttonAuto.Name = ("buttonAuto");

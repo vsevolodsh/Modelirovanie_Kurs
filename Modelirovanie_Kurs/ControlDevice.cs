@@ -16,11 +16,11 @@
         }
         public void ExecuteTact()
         {
-            _stAndCndMemory.StateCode = _cmbScheme_D.NextStateCode;
+            _stAndCndMemory.CurrentStateCode = _cmbScheme_D.NextStateCode;
             _operatingDevice.ConditionsX.CopyTo(_stAndCndMemory.ConditionsX, 0);
-            _cmbScheme_Y.SetCurrentOperationsY(_stAndCndMemory.StateCode, _stAndCndMemory.ConditionsX);
+            _cmbScheme_Y.SetCurrentOperationsY(_stAndCndMemory.ArrStateA, _stAndCndMemory.ConditionsX);
             _operatingDevice.ExecuteTact(_cmbScheme_Y.OperationsY);
-            _cmbScheme_D.setNextStateCode(_stAndCndMemory.StateCode, _stAndCndMemory.ConditionsX);
+            _cmbScheme_D.setNextStateCode(_stAndCndMemory.ArrStateA, _stAndCndMemory.ConditionsX);
         }
     }
 }

@@ -34,7 +34,7 @@
                 OperationsY[6] = true;
                 OperationsY[7] = true;
             }
-            else if (statesA[2] && conditionsX[4] && conditionsX[5])
+            else if (statesA[3] && conditionsX[4] && conditionsX[5])
             {
                 OperationsY[8] = true;
             }
