@@ -16,11 +16,11 @@
         }
         public void ExecuteTact()
         {
-            _stAndCndMemory.CurrentStateCode = _cmbScheme_D.NextStateCode;
-            _operatingDevice.ConditionsX.CopyTo(_stAndCndMemory.ConditionsX, 0);
-            _cmbScheme_Y.SetCurrentOperationsY(_stAndCndMemory.ArrStateA, _stAndCndMemory.ConditionsX);
-            _operatingDevice.ExecuteTact(_cmbScheme_Y.OperationsY);
-            _cmbScheme_D.setNextStateCode(_stAndCndMemory.ArrStateA, _stAndCndMemory.ConditionsX);
+            _stAndCndMemory.CurrentStateCode = _cmbScheme_D.NextStateCode; // Записываем в ПС код состояния, полученный из КС_D
+            _operatingDevice.ConditionsX.CopyTo(_stAndCndMemory.ConditionsX, 0); //Записываем в ПЛУ значение ЛУ, вычисленный в ОА
+            _cmbScheme_Y.SetCurrentOperationsY(_stAndCndMemory.ArrStateA, _stAndCndMemory.ConditionsX); // Формируем вектор выходных сигналов Y
+            _operatingDevice.ExecuteTact(_cmbScheme_Y.OperationsY); // Выполняем микрооперации 
+            _cmbScheme_D.setNextStateCode(_stAndCndMemory.ArrStateA, _stAndCndMemory.ConditionsX); // Формируем код следующего состояния 
         }
     }
 }

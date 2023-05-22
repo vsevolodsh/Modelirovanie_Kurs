@@ -89,9 +89,9 @@
             {
                 _variables.C += (_variables.AM << 2) >> 2; // прибавляем к С первые 30 разрядов числа АМ
                 _variables.B = (ushort)(((_variables.B << 1) & 0x7fff) | (_variables.B & 0x8000)); // сдвиг влево числа В,
-                // знаковый разряд отстается на своем месте.
+                // знаковый разряд остается на своем месте.
                 _variables.AM >>= 1; // сдвиг АМ на 1 разряд вправо
-                _variables.Count--; //Уменьшаем счетсчик на 1
+                _variables.Count--; //Уменьшаем счетчик на 1
                 RightCircleBranch = true;
             }
             else

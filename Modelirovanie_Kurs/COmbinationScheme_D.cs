@@ -4,7 +4,7 @@
     {
         public bool[] NextStateCode  { get; private set; } = new bool[2];
 
-        public void setNextStateCode(bool[] statesA, bool[] conditionsX)
+        public void setNextStateCode(bool[] statesA, bool[] conditionsX) // Формируем код следующего состояния
         {
             for (int i = 0; i < NextStateCode.Length; i++)
             {

@@ -93,6 +93,7 @@ namespace Modelirovanie_Kurs
         {
             radioButtonA0.Checked = true;
             buttonTact.Enabled = true;
+            buttonAuto.Enabled = true;
 
             for (int i = arrStartValueA.Length - 1; i >= 0; i--) // считываем значения А и B 
             {
@@ -162,6 +163,7 @@ namespace Modelirovanie_Kurs
                     controlDevice.ExecuteTact();
                     UpdateVar();
                     UpdateInterfaceFlags();
+                    UpdateScheme();
                 } while (!isOver);
                 MessageBox.Show($"Умножение окончено.");
             }
@@ -280,6 +282,13 @@ namespace Modelirovanie_Kurs
         private void buttonClear_Click(object sender, EventArgs e)
         {
             SetAllFlagsFalse();
+            variables.A = 0;
+            variables.B = 0;
+            variables.C = 0;
+            variables.AM = 0;
+            variables.Count = 0;
+            UpdateVar();
+            SetSchemeStart(); 
         }
 
         private void UpdateScheme()
@@ -288,7 +297,7 @@ namespace Modelirovanie_Kurs
             {
                 if (i < arrCS_D.Length)
                 {
-                    arrStateMemory[i].Text = stAndCndtMemory.CurrentStateCode[i] == true? "1": "0";
+                    arrStateMemory[i].Text = stAndCndtMemory.CurrentStateCode[i] == true ? "1" : "0";
                     arrCS_D[i].Text = cmbScheme_D.NextStateCode[i] == true ? "1" : "0";
                 }
                 if (i < arrDecoder.Length)
@@ -302,6 +311,27 @@ namespace Modelirovanie_Kurs
                 arrCS_Y[i].Text = cmbScheme_Y.OperationsY[i] == true ? "1" : "0";
             }
 
+        }
+
+        private void SetSchemeStart()
+        {
+            for (int i = 0; i < arrCS_Y.Length; i++)
+            {
+                if (i < arrCS_D.Length)
+                {
+                    arrStateMemory[i].Text = "0";
+                    arrCS_D[i].Text = "0";
+                }
+                if (i < arrDecoder.Length)
+                {
+                    arrDecoder[i].Text = "0";
+                }
+                if (i < arrStateConditions.Length)
+                {
+                    arrStateConditions[i].Text = "0";
+                }
+                arrCS_Y[i].Text = "0";
+            }
         }
     }
 }

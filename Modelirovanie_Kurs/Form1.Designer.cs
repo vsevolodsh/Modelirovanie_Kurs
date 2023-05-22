@@ -1118,7 +1118,7 @@
             // checkBoxX0
             // 
             this.checkBoxX0.AutoSize = (true);
-            this.checkBoxX0.Location = (new global::System.Drawing.Point(476, 125));
+            this.checkBoxX0.Location = (new global::System.Drawing.Point(551, 143));
             this.checkBoxX0.Name = ("checkBoxX0");
             this.checkBoxX0.Size = (new global::System.Drawing.Size(18, 17));
             this.checkBoxX0.TabIndex = (26);
@@ -1126,9 +1126,9 @@
             // 
             // radioButtonA0
             // 
+            this.radioButtonA0.AutoCheck = (false);
             this.radioButtonA0.AutoSize = (true);
-            this.radioButtonA0.Enabled = (false);
-            this.radioButtonA0.Location = (new global::System.Drawing.Point(433, 76));
+            this.radioButtonA0.Location = (new global::System.Drawing.Point(486, 87));
             this.radioButtonA0.Name = ("radioButtonA0");
             this.radioButtonA0.Size = (new global::System.Drawing.Size(17, 16));
             this.radioButtonA0.TabIndex = (17);
@@ -1136,11 +1136,11 @@
             // 
             // checkBoxY10
             // 
+            this.checkBoxY10.AutoCheck = (false);
             this.checkBoxY10.AutoSize = (true);
             this.checkBoxY10.BackColor = (global::System.Drawing.SystemColors.ControlDark);
-            this.checkBoxY10.Enabled = (false);
             this.checkBoxY10.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.checkBoxY10.Location = (new global::System.Drawing.Point(485, 915));
+            this.checkBoxY10.Location = (new global::System.Drawing.Point(551, 1053));
             this.checkBoxY10.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.checkBoxY10.Name = ("checkBoxY10");
             this.checkBoxY10.Size = (new global::System.Drawing.Size(18, 17));
@@ -1150,11 +1150,11 @@
             // 
             // checkBoxY9
             // 
+            this.checkBoxY9.AutoCheck = (false);
             this.checkBoxY9.AutoSize = (true);
             this.checkBoxY9.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.checkBoxY9.Enabled = (false);
             this.checkBoxY9.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.checkBoxY9.Location = (new global::System.Drawing.Point(485, 749));
+            this.checkBoxY9.Location = (new global::System.Drawing.Point(551, 859));
             this.checkBoxY9.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.checkBoxY9.Name = ("checkBoxY9");
             this.checkBoxY9.Size = (new global::System.Drawing.Size(18, 17));
@@ -1163,11 +1163,11 @@
             // 
             // checkBoxY5_Y8
             // 
+            this.checkBoxY5_Y8.AutoCheck = (false);
             this.checkBoxY5_Y8.AutoSize = (true);
             this.checkBoxY5_Y8.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.checkBoxY5_Y8.Enabled = (false);
             this.checkBoxY5_Y8.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.checkBoxY5_Y8.Location = (new global::System.Drawing.Point(625, 501));
+            this.checkBoxY5_Y8.Location = (new global::System.Drawing.Point(713, 572));
             this.checkBoxY5_Y8.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.checkBoxY5_Y8.Name = ("checkBoxY5_Y8");
             this.checkBoxY5_Y8.Size = (new global::System.Drawing.Size(18, 17));
@@ -1177,11 +1177,11 @@
             // 
             // checkBoxY6_Y8
             // 
+            this.checkBoxY6_Y8.AutoCheck = (false);
             this.checkBoxY6_Y8.AutoSize = (true);
             this.checkBoxY6_Y8.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.checkBoxY6_Y8.Enabled = (false);
             this.checkBoxY6_Y8.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.checkBoxY6_Y8.Location = (new global::System.Drawing.Point(318, 501));
+            this.checkBoxY6_Y8.Location = (new global::System.Drawing.Point(366, 572));
             this.checkBoxY6_Y8.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.checkBoxY6_Y8.Name = ("checkBoxY6_Y8");
             this.checkBoxY6_Y8.Size = (new global::System.Drawing.Size(18, 17));
@@ -1191,11 +1191,11 @@
             // 
             // checkBoxY1_Y4
             // 
+            this.checkBoxY1_Y4.AutoCheck = (false);
             this.checkBoxY1_Y4.AutoSize = (true);
             this.checkBoxY1_Y4.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.checkBoxY1_Y4.Enabled = (false);
             this.checkBoxY1_Y4.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.checkBoxY1_Y4.Location = (new global::System.Drawing.Point(476, 352));
+            this.checkBoxY1_Y4.Location = (new global::System.Drawing.Point(551, 404));
             this.checkBoxY1_Y4.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.checkBoxY1_Y4.Name = ("checkBoxY1_Y4");
             this.checkBoxY1_Y4.Size = (new global::System.Drawing.Size(18, 17));
@@ -1205,11 +1205,11 @@
             // 
             // checkBoxY1
             // 
+            this.checkBoxY1.AutoCheck = (false);
             this.checkBoxY1.AutoSize = (true);
             this.checkBoxY1.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.checkBoxY1.Enabled = (false);
             this.checkBoxY1.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.checkBoxY1.Location = (new global::System.Drawing.Point(175, 355));
+            this.checkBoxY1.Location = (new global::System.Drawing.Point(200, 404));
             this.checkBoxY1.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.checkBoxY1.Name = ("checkBoxY1");
             this.checkBoxY1.Size = (new global::System.Drawing.Size(18, 17));
@@ -1219,11 +1219,11 @@
             // 
             // radioButtonA4
             // 
+            this.radioButtonA4.AutoCheck = (false);
             this.radioButtonA4.AutoSize = (true);
             this.radioButtonA4.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.radioButtonA4.Enabled = (false);
             this.radioButtonA4.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.radioButtonA4.Location = (new global::System.Drawing.Point(433, 959));
+            this.radioButtonA4.Location = (new global::System.Drawing.Point(486, 1098));
             this.radioButtonA4.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.radioButtonA4.Name = ("radioButtonA4");
             this.radioButtonA4.Size = (new global::System.Drawing.Size(17, 16));
@@ -1233,11 +1233,11 @@
             // 
             // radioButtonA3
             // 
+            this.radioButtonA3.AutoCheck = (false);
             this.radioButtonA3.AutoSize = (true);
             this.radioButtonA3.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.radioButtonA3.Enabled = (false);
             this.radioButtonA3.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.radioButtonA3.Location = (new global::System.Drawing.Point(433, 786));
+            this.radioButtonA3.Location = (new global::System.Drawing.Point(486, 903));
             this.radioButtonA3.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.radioButtonA3.Name = ("radioButtonA3");
             this.radioButtonA3.Size = (new global::System.Drawing.Size(17, 16));
@@ -1247,11 +1247,11 @@
             // 
             // radioButtonA2
             // 
+            this.radioButtonA2.AutoCheck = (false);
             this.radioButtonA2.AutoSize = (true);
             this.radioButtonA2.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.radioButtonA2.Enabled = (false);
             this.radioButtonA2.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.radioButtonA2.Location = (new global::System.Drawing.Point(433, 554));
+            this.radioButtonA2.Location = (new global::System.Drawing.Point(486, 641));
             this.radioButtonA2.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.radioButtonA2.Name = ("radioButtonA2");
             this.radioButtonA2.Size = (new global::System.Drawing.Size(17, 16));
@@ -1261,11 +1261,11 @@
             // 
             // radioButtonA1
             // 
+            this.radioButtonA1.AutoCheck = (false);
             this.radioButtonA1.AutoSize = (true);
             this.radioButtonA1.BackColor = (global::System.Drawing.SystemColors.Window);
-            this.radioButtonA1.Enabled = (false);
             this.radioButtonA1.FlatAppearance.CheckedBackColor = (global::System.Drawing.Color.Black);
-            this.radioButtonA1.Location = (new global::System.Drawing.Point(433, 390));
+            this.radioButtonA1.Location = (new global::System.Drawing.Point(486, 448));
             this.radioButtonA1.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.radioButtonA1.Name = ("radioButtonA1");
             this.radioButtonA1.Size = (new global::System.Drawing.Size(17, 16));
@@ -1281,7 +1281,7 @@
             this.pictureBox1.Location = (new global::System.Drawing.Point(17, 11));
             this.pictureBox1.Margin = (new global::System.Windows.Forms.Padding(3, 4, 3, 4));
             this.pictureBox1.Name = ("pictureBox1");
-            this.pictureBox1.Size = (new global::System.Drawing.Size(636, 1032));
+            this.pictureBox1.Size = (new global::System.Drawing.Size(731, 1185));
             this.pictureBox1.SizeMode = (global::System.Windows.Forms.PictureBoxSizeMode.AutoSize);
             this.pictureBox1.TabIndex = (0);
             this.pictureBox1.TabStop = (false);
@@ -1647,9 +1647,9 @@
             this.label24.AutoSize = (true);
             this.label24.Location = (new global::System.Drawing.Point(1, 3));
             this.label24.Name = ("label24");
-            this.label24.Size = (new global::System.Drawing.Size(17, 20));
+            this.label24.Size = (new global::System.Drawing.Size(25, 20));
             this.label24.TabIndex = (0);
-            this.label24.Text = ("9");
+            this.label24.Text = ("10");
             // 
             // panel289
             // 
@@ -1725,7 +1725,7 @@
             this.label80.Name = ("label80");
             this.label80.Size = (new global::System.Drawing.Size(17, 20));
             this.label80.TabIndex = (0);
-            this.label80.Text = ("0");
+            this.label80.Text = ("1");
             // 
             // panel286
             // 
@@ -1801,7 +1801,7 @@
             this.label96.Name = ("label96");
             this.label96.Size = (new global::System.Drawing.Size(17, 20));
             this.label96.TabIndex = (0);
-            this.label96.Text = ("1");
+            this.label96.Text = ("2");
             // 
             // panel287
             // 
@@ -1877,7 +1877,7 @@
             this.label120.Name = ("label120");
             this.label120.Size = (new global::System.Drawing.Size(17, 20));
             this.label120.TabIndex = (0);
-            this.label120.Text = ("4");
+            this.label120.Text = ("5");
             // 
             // panel288
             // 
@@ -1953,7 +1953,7 @@
             this.label130.Name = ("label130");
             this.label130.Size = (new global::System.Drawing.Size(17, 20));
             this.label130.TabIndex = (0);
-            this.label130.Text = ("3");
+            this.label130.Text = ("4");
             // 
             // panel284
             // 
@@ -2029,7 +2029,7 @@
             this.label138.Name = ("label138");
             this.label138.Size = (new global::System.Drawing.Size(17, 20));
             this.label138.TabIndex = (0);
-            this.label138.Text = ("5");
+            this.label138.Text = ("6");
             // 
             // panel274
             // 
@@ -2067,7 +2067,7 @@
             this.label144.Name = ("label144");
             this.label144.Size = (new global::System.Drawing.Size(17, 20));
             this.label144.TabIndex = (0);
-            this.label144.Text = ("2");
+            this.label144.Text = ("3");
             // 
             // panel275
             // 
@@ -2143,7 +2143,7 @@
             this.label152.Name = ("label152");
             this.label152.Size = (new global::System.Drawing.Size(17, 20));
             this.label152.TabIndex = (0);
-            this.label152.Text = ("7");
+            this.label152.Text = ("8");
             // 
             // panel277
             // 
@@ -2219,7 +2219,7 @@
             this.label160.Name = ("label160");
             this.label160.Size = (new global::System.Drawing.Size(17, 20));
             this.label160.TabIndex = (0);
-            this.label160.Text = ("6");
+            this.label160.Text = ("7");
             // 
             // panel279
             // 
@@ -2295,7 +2295,7 @@
             this.label169.Name = ("label169");
             this.label169.Size = (new global::System.Drawing.Size(17, 20));
             this.label169.TabIndex = (0);
-            this.label169.Text = ("8");
+            this.label169.Text = ("9");
             // 
             // pictureBox2
             // 

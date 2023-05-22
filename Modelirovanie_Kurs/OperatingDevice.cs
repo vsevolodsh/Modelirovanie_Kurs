@@ -25,7 +25,7 @@
              () => {_variables.C |= 0x80000000;} //y10
              };
         }
-        public void FillConditionsXArray()
+        public void FillConditionsXArray() // Высчитываем значение логических условий
         {
             ConditionsX[0] = form1.checkBoxX0.Checked;
             ConditionsX[1] = (_variables.A & 0x7fff) == 0;
@@ -42,10 +42,10 @@
             {
                 if (operationsY[i])
                 {
-                    _doOperationsY[i]();
+                    _doOperationsY[i](); // Выполняем операцию
                 }
             }
-            FillConditionsXArray();
+            FillConditionsXArray(); 
         }
     }
 }
